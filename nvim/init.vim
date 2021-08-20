@@ -12,13 +12,11 @@ noremap <Space>w :w<CR>
 " ↓ 保存して終了
 " noremap <Space>q :<C-u>q<CR>
 noremap <Space>q :q<CR>
-" defx 呼び出し
-nnoremap <Space>df :Defx<CR>
 " tabnew 新しいタブの作成
 noremap <Space>nt :tabnew<CR>:Defx<CR>
 " buffer の移動
-noremap <Space>; :bnext<CR>
-noremap <Space>' :bprev<CR>
+noremap <Space>' :bnext<CR>
+noremap <Space>; :bprev<CR>
 " buffer 削除
 noremap <Space>dd :bdelete<CR>
 " ＜追加＞分割画面移動
@@ -83,6 +81,13 @@ endif
 " :PlugInstall """"""""""""""""""
 call plug#begin('~/.config/nvim/plugged')
     Plug 'lambdalisue/fern.vim'
+    Plug 'lambdalisue/fern-renderer-devicons.vim'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+    Plug 'lambdalisue/nerdfont.vim'
+    Plug 'lambdalisue/glyph-palette.vim'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
     Plug 'antoinemadec/FixCursorHold.nvim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -173,19 +178,35 @@ augroup END
 
 """"""""""""""""""""""""""""""""""""""""""
 " defx key bind
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/defx.vim'))
   source ~/.config/nvim/plugins/defx.vim
 endif
+""""""""""""""""""""""""""""""""""""""""""
 "" defx vim end """"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 
 " set runtimepath+=/usr/local/bin/fzf
 
+""""""""""""""""""""""""""""""""""""""""""
 "" fzf vim """"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
   source ~/.config/nvim/plugins/fzf.vim
 endif
+""""""""""""""""""""""""""""""""""""""""""
 "" fzf vim end """"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""
+"" Fern vim """"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
+if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
+  source ~/.config/nvim/plugins/fern.vim
+endif
+""""""""""""""""""""""""""""""""""""""""""
+"" Fern vim end """""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 
 " indent 
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
@@ -195,15 +216,55 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 """"""""""""""""""""""""""""""""""""""
 " highlight 情報取得関数
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
-  source ~/.config/nvim/plugins/coc.vim
+  source ~/.config/nvim/plugins/SyntaxInfo.vim
 endif
 """"""""""""""""""""""""""""""""""""""
+" highlight end 
+""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""
 "coc vim
 """"""""""""""""""""""""""""""""""""""
-
 if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
   source ~/.config/nvim/plugins/coc.vim
 endif
+""""""""""""""""""""""""""""""""""""""
+"coc vim end
+""""""""""""""""""""""""""""""""""""""
+
+" you can add these colors to your .vimrc to help customizing
+let s:brown = "905532"
+let s:aqua =  "3AFFDB"
+"let s:blue = "AE403F"
+let s:blue = "689FB6"
+let s:darkBlue = "44788E"
+let s:purple = "834F79"
+let s:lightPurple = "834F79"
+let s:red = "AE403F"
+let s:beige = "F5C06F"
+let s:yellow = "F09F17"
+let s:orange = "D4843E"
+let s:darkOrange = "F16529"
+let s:pink = "CB6F6F"
+let s:salmon = "EE6E73"
+let s:green = "8FAA54"
+let s:lightGreen = "31B53E"
+let s:white = "31B53E"
+" let s:white = "FFFFFF"
+let s:rspec_red = 'FE405F'
+let s:git_orange = 'F54D27'
+
+let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
+
+let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
+
+let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
+
+let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders that did not match any rule
+let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
+

@@ -1,0 +1,142 @@
+{
+  "editor.fontFamily": "Ricty Diminished",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 16,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedTypes": false,
+	"intelephense.diagnostics.undefinedClassConstants": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Shades of Purple",
+  "vim.leader": "<space>",
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>", "<space>", "w"]
+    }
+  ],// return normal when file save
+  // "vim.insertModeKeyBindingsNonRecursive": [
+  //     {
+  //         "before": ["<C-d>"],
+  //         "commands": ["deleteLeft"]
+  //     }
+  // ],
+//  "vim.normalModeKeyBindingsNonRecursive": [
+ //   {
+  //    "before": ["<Enter>"],
+ //     "commands": ["editor.action.insertLineAfter"]
+ //   }
+ // ],
+
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["bookmarks.toggle"]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["bookmarks.list"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["bookmarks.toggleLabeled"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "q"], 
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["<leader>", "d", "r"],
+      "commands": ["workbench.action.debug.restart"]
+    },
+    {
+      "before": ["<leader>", "d", "e"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    {
+      "before": ["<leader>", "d", "u"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    {
+      "before": ["<leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+    {
+      "before": ["<leader>", "<C-r>"],
+      "commands": ["workbench.action.openRecent"]
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "workbench.tree.renderIndentGuides": "always",
+"tabnine.experimentalAutoImports": true,
+"editor.minimap.maxColumn": 25,
+"terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+"gitlens.codeLens.scopes": [
+    "document",
+    "containers"
+],
+"terminal.integrated.macOptionClickForcesSelection": true,
+"files.autoSave": "onFocusChange",
+"editor.cursorStyle": "line",
+"editor.lineNumbers": "relative",
+"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+"files.autoGuessEncoding": true,
+  // "editor.lineHeight": 0,
+  // "editor.formatOnSave": true
+  "indentRainbow.colors": [
+    // "rgba(200,200,200,0.03)",
+    "rgba(100,100,100,0.03)",
+    "rgba(0,0,0,0.03)"
+    // "rgba(255,255,64,0.02)",
+    // "rgba(127,255,127,0.02)",
+    // "rgba(255,127,255,0.02)",
+    // "rgba(79,236,236,0.02)"
+  ],
+  "indentRainbow.errorColor": "rgba(128,32,32,0.1)",
+  // The indent color when there is a mix between spaces and tabs.
+  // To be disabled this coloring set this to an empty string.
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.1)",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "diffEditor.ignoreTrimWhitespace": false
+}

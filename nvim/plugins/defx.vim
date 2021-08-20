@@ -1,3 +1,6 @@
+" defx 呼び出し
+nnoremap <Space>df :Defx<CR>
+
 call defx#custom#column('icon', {
       \ 'directory_icon': '▸',
       \ 'opened_icon': '▾',

@@ -1,0 +1,32 @@
+if git_status=$(cd $1 && git status 2>/dev/null ); then
+  git_branch="$(echo $git_status| awk 'NR==1 {print $3}')"
+  case $git_status in
+    # *Changes\ not\ staged* ) state="#[bg=colour16,fg=colour49] ± #[fg=default]" ;;
+    # *Changes\ to\ be\ committed* ) state="#[bg=colour16,fg=colour49] + #[default]" ;; 
+    # * ) state="#[bg=green,fg=colour16] ✔ #[default]" ;;
+    *Changes\ not\ staged* ) state="#[bg=colour16,fg=colour49]± #[fg=default]" ;;
+    *Changes\ to\ be\ committed* ) state="#[bg=colour16,fg=colour49]+ #[default]" ;; 
+    * ) state="#[bg=colour16,fg=colour49]✔ #[default]" ;;
+  esac
+  if [[ $git_branch = "master" ]]; then
+    # git_info="#[underscore]#[fg=colour116] ⭠ ${git_branch} #[default]${state}"
+    # git_info="#[underscore]#[bg=colour16,fg=colour116] ⭠ ${git_branch} #[default]${state}"
+    # git_info="#[underscore]#[fg=colour49]  ${git_branch} #[default]${state}"
+    git_info="#[underscore]#[fg=colour49]  ${git_branch} #[default]${state}"
+  else
+    # git_info="#[underscore]#[bg=colour16,fg=colour115] ⭠ ${git_branch} #[default]${state}"
+    # git_info="#[underscore]#[fg=colour115] ⭠ ${git_branch} #[default]${state}"
+    git_info="#[fg=colour49]  ${git_branch} #[default]${state}"
+  fi
+else
+  git_info=""
+fi
+
+# tmuxの上の番号や絶対パスを表示したときのパスの文字色など、172,214はオレンジ色
+# directory="#[underscore]#[bg=colour16,fg=colour149]$1#[default]"
+# directory="#[fg=colour172]$1#[default]"
+# ↓ オレンジの魔晄カラーと合うやつ
+# directory="#[fg=colour214]$1#[default]"
+directory="#[fg=yellow]$1#[default] "
+
+echo "$directory$git_info"
