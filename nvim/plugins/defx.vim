@@ -13,7 +13,7 @@ call defx#custom#column('mark', {
       \ })
 
 call defx#custom#option('_', {
-      \ 'winwidth': 30,
+      \ 'winwidth': 36,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,

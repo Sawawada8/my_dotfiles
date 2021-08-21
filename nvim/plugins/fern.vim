@@ -1,7 +1,7 @@
 " let g:fern#renderer = "devicons"
 
-nnoremap <Space>ff :Fern . -reveal=% -drawer -width=40 -toggle<CR>
-nnoremap <Space>fe :Fern ~ -reveal=% -drawer -width=40 -toggle<CR>
+nnoremap <Space>ff :Fern . -reveal=% -drawer -width=34 -toggle<CR>
+nnoremap <Space>fe :Fern ~ -reveal=% -drawer -width=34 -toggle<CR>
 
 let g:fern#default_hidden=1
 let g:fern#renderer = "nerdfont"
@@ -31,4 +31,6 @@ augroup END
 "  autocmd!
 "  autocmd User FernHighlight call s:on_highlight()
 "augroup END
-
+"nmap <Space>pp
+"     \ <Plug>(my-new-file)
+"     \ <Plug>(fern-action-new-file=)foo<CR>
