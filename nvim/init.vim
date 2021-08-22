@@ -40,6 +40,7 @@ noremap <C-w>- :vs<CR>
 noremap <Space>vv :vsplit<CR><C-w><CR>
 " vsplit move
 noremap ;; <C-w>w
+noremap ;' <C-w>W
 
 noremap <Space>/ I//<Space><ESC>
 " Insert Mode 
