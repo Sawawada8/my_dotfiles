@@ -12,21 +12,34 @@ noremap <Space>w :w<CR>
 " ↓ 保存して終了
 " noremap <Space>q :<C-u>q<CR>
 noremap <Space>q :q<CR>
+
 " tabnew 新しいタブの作成
-noremap <Space>nt :tabnew<CR>:Defx<CR>
+"noremap <Space>nt :tabnew<CR>:Defx<CR>
+noremap <Space>nt :tabnew<CR>:Fern . -reveal=% -drawer<CR>
+
+" tab 移動
+noremap <Tab> :tabnext<CR>
+"noremap <S-Tab> :tabprev<CR>
+noremap <S-Tab> :tabclose<CR>
+
 " buffer の移動
 noremap <Space>' :bnext<CR>
 noremap <Space>; :bprev<CR>
 " buffer 削除
 noremap <Space>dd :bdelete<CR>
+
 " ＜追加＞分割画面移動
-noremap <silent><C-h> <C-w>h                                    
-noremap <silent><C-j> <C-w>j
-noremap <silent><C-k> <C-w>k
-noremap <silent><C-l> <C-w>l
+"noremap <silent><C-h> <C-w>h                                    
+"noremap <silent><C-j> <C-w>j
+"noremap <silent><C-k> <C-w>k
+"noremap <silent><C-l> <C-w>l
 
 " vs 画面分割
 noremap <C-w>- :vs<CR>
+"noremap ss :split<CR><C-w>w
+noremap <Space>vv :vsplit<CR><C-w><CR>
+" vsplit move
+noremap ;; <C-w>w
 
 noremap <Space>/ I//<Space><ESC>
 " Insert Mode 
@@ -76,16 +89,16 @@ if &compatible
 endif    
 
 
-""""""""""""""""""""""""""""
-" vim-plug """"""""""""""""""
-" :PlugInstall """"""""""""""""""
-""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
+" vim-plug 
+" :PlugInstall 
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
   source ~/.config/nvim/modules/plug.rc.vim
 endif
-""""""""""""""""""""""""""""
-" end vim-plug """"""""""""""""""
-""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
+" end vim-plug 
+""""""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""
@@ -95,42 +108,42 @@ if filereadable(expand('~/.config/nvim/plugins/dein_load.vim---'))
   source ~/.config/nvim/plugins/dein_load.vim
 endif
 """"""""""""""""""""""""""""""""""""""""""
-"" dein end """"""""""""""""""""""""""""""
+"" dein end
 """"""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" color scheme""""""""""""""""""""""""""""
+" color scheme
 """"""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/modules/color_scheme.vim'))
   source ~/.config/nvim/modules/color_scheme.vim
 endif
 """"""""""""""""""""""""""""""""""""""""""
-" color scheme end """""""""""""""""""""""
+" color scheme end 
 """"""""""""""""""""""""""""""""""""""""""
 
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" vim air line """"""""""""""""""""""""""""
+" vim air line 
 """"""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/air_line.vim'))
   source ~/.config/nvim/plugins/air_line.vim
 endif
 """"""""""""""""""""""""""""""""""""""""""
-" vim air line end """""""""""""""""""""""
+" vim air line end 
 """"""""""""""""""""""""""""""""""""""""""
 
 
-""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 " active window color clear
-""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/modules/color_conf.vim---'))
   source ~/.config/nvim/modules/color_conf.vim
 endif
-""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 " active window color clear
-""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 
 
 "hi airline_tabfill ctermfg=49 ctermbg=100
@@ -182,7 +195,7 @@ endif
 " let g:AutoClosePairs_add = "<> |"
 
 
-""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 " highlight 情報取得関数
 """"""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
@@ -192,15 +205,17 @@ endif
 " highlight end 
 """"""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""
 "coc vim
-""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 if filereadable(expand('~/.config/nvim/plugins/coc---.vim'))
   source ~/.config/nvim/plugins/coc.vim
 endif
-""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 "coc vim end
-""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
+
 
 " you can add these colors to your .vimrc to help customizing
 "let s:brown = "905532"
