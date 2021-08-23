@@ -1,5 +1,6 @@
 
 call plug#begin('~/.config/nvim/plugged')
+
 """ fern
     Plug 'lambdalisue/fern.vim'
     Plug 'lambdalisue/fern-renderer-devicons.vim'
@@ -10,7 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 """ defx
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     if has('nvim')
         Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     else
@@ -24,6 +24,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
+""" ctrlP
+    Plug 'ctrlpvim/ctrlp.vim'
+    " Plug 'mattn/ctrlp-matchfuzzy'
+""" fuzzy    
+    " Plug 'mattn/vim-fz'
+
 """ airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -34,5 +40,20 @@ call plug#begin('~/.config/nvim/plugged')
 """ colorscheme
     Plug 'altercation/vim-colors-solarized'
     Plug 'Rigellute/shades-of-purple.vim'
-call plug#end()
+    Plug 'cocopon/iceberg.vim'
 
+""" athers
+    Plug 'jiangmiao/auto-pairs'
+
+""" snipet
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+
+""" languages
+    Plug 'StanAngeloff/php.vim'
+    Plug 'elzr/vim-json'
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'rust-lang/rust.vim'
+
+call plug#end()

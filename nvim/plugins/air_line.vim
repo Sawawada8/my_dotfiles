@@ -5,8 +5,8 @@
 
 " airline 三角のやつ
 let g:shades_of_purple_airline = 1
-let g:airline_theme='shades_of_purple'
-"let g:airline_theme='solarized'
+"let g:airline_theme='shades_of_purple'
+let g:airline_theme='iceberg'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 

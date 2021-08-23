@@ -312,13 +312,14 @@ end
 
 # starship init fish | source
 # ####################################################
-alias nv "nvim"
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
+alias nv "nvim"
 alias fconf "nvim ~/.config/fish/config.fish"
 alias fload "source ~/.config/fish/config.fish"
 alias nvconf "nvim ~/.config/nvim/init.vim"
+alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
 alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias la "exa -la -g --icons"
 alias l. "exa -ld -g --icons .*"

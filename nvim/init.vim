@@ -13,6 +13,23 @@ noremap <Space>w :w<CR>
 " noremap <Space>q :<C-u>q<CR>
 noremap <Space>q :q<CR>
 
+""""""""""""""""""""
+" ctrlp file search
+let g:ctrlp_map = '<Space>p'
+let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
+"
+"nnoremap <Space>p :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
+"      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
+"      \ : 'Fz'<CR>
+"command! FzColors call fz#run({
+"    \ 'type': 'list',
+"    \ 'list': uniq(map(split(globpath(&rtp, "colors/*.vim"), "\n"), "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')")),
+"    \ 'accept': {result->execute('colorscheme ' . result['items'][0])},
+"    \ })
+""""""""""""""""""""
+
+""""""""""""""""""""
 " tabnew 新しいタブの作成
 "noremap <Space>nt :tabnew<CR>:Defx<CR>
 noremap <Space>nt :tabnew<CR>:Fern . -reveal=% -drawer<CR>
@@ -21,6 +38,7 @@ noremap <Space>nt :tabnew<CR>:Fern . -reveal=% -drawer<CR>
 noremap <Tab> :tabnext<CR>
 "noremap <S-Tab> :tabprev<CR>
 noremap <S-Tab> :tabclose<CR>
+""""""""""""""""""""
 
 " buffer の移動
 noremap <Space>' :bnext<CR>
@@ -100,6 +118,26 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " end vim-plug 
 """"""""""""""""""""""""""""""""""""""""""
+
+
+" snipet
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+"" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+"
+" UltiSnips スニペット展開
+let g:UltiSnipsExpandTrigger="<c-k>"
+" UltiSnips スニペット次の位置に移動
+let g:UltiSnipsJumpForwardTrigger="<c-,>"
+" UltiSnips スニペット前の位置に戻る
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" 自作スニペット
+let g:UltiSnipsSnippetsDir = '~/.config/nvim/plugins/snippets'
+set runtimepath+=~/.config/nvim/plugins/snippets
 
 
 """"""""""""""""""""""""""""""""""""""""""
@@ -255,4 +293,11 @@ endif
 
 "highlight CocErrorSign ctermfg=15 ctermbg=196
 "highlight CocWarningSign ctermfg=0 ctermbg=172
+
+
+"augroup ChangeBackground
+"  autocmd!
+"  autocmd BufRead * highlight Normal guibg='#05051b'
+"augroup END
+
 
