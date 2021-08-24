@@ -12,7 +12,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "on",
-  "workbench.colorTheme": "Shades of Purple",
+  "workbench.colorTheme": "Iceberg",
   "vim.leader": "<space>",
   "vim.visualModeKeyBindings": [
     {

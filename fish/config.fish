@@ -312,31 +312,38 @@ end
 
 # starship init fish | source
 # ####################################################
-alias nv="nvim"
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias fconf="nvim ~/.config/fish/config.fish"
-alias fload="source ~/.config/fish/config.fish"
-alias nvconf="nvim ~/.config/nvim/init.vim"
-alias createED="cp ~/my_scripts/.editorconfig ./.editorconfig"
-alias la="exa -la"
-alias l.="exa -ld .*"
-alias l="exa -l"
+alias ... "cd ../.."
+alias .... "cd ../../.."
+alias ..... "cd ../../../.."
+alias nv "nvim"
+alias fconf "nvim ~/.config/fish/config.fish"
+alias fload "source ~/.config/fish/config.fish"
+alias nvconf "nvim ~/.config/nvim/init.vim"
+alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
+alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias la "exa -la -g --icons"
+alias l. "exa -ld -g --icons .*"
+alias l "exa -l -g --icons"
+alias ll "exa -l"
+
+# alias ide "source ~/.my_config/zsh/ide"
+alias ide "source ~/.my_config/zsh/fish_ide"
 # alias dockerrun="source ~/my_scripts/doc.sh"
 # alias dockerrun="~/my_scripts/doc.sh"
 #
 # dotfiles sync #########################################
-alias .rsync="source ~/my_scripts/dotfile_rsync.sh"
-alias .rsyncconf="nvim ~/my_scripts/dotfile_rsync.sh"
+alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
+alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 
 # ####################################################
 # pyenv setting
 # ####################################################
-set -Ux PYENV_ROOT $HOME/.pyenv
-set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-status is-interactive; and pyenv init --path | source
-pyenv init - | source
+#set -Ux PYENV_ROOT $HOME/.pyenv
+#set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+#status is-interactive; and pyenv init --path | source
+#pyenv init - | source
 # ####################################################
 #
 # bass source ~/.config/fish/pyenv-set
+#
+bass source ~/.config/fish/tmux_load.sh
