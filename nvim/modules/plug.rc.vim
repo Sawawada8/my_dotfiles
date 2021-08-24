@@ -11,13 +11,17 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 """ defx
-    if has('nvim')
-        Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-        Plug 'Shougo/defx.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-    endif
+"    if has('nvim')
+"        Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+"    else
+"        Plug 'Shougo/defx.nvim'
+"        Plug 'roxma/nvim-yarp'
+"        Plug 'roxma/vim-hug-neovim-rpc'
+"    endif
+
+""" git
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
 """ fzf
     Plug 'antoinemadec/FixCursorHold.nvim'
@@ -27,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
 """ ctrlP
     Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'mattn/ctrlp-matchfuzzy'
+ 
 """ fuzzy    
     " Plug 'mattn/vim-fz'
 
@@ -38,8 +43,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """ colorscheme
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'Rigellute/shades-of-purple.vim'
+    " Plug 'altercation/vim-colors-solarized'
+    " Plug 'Rigellute/shades-of-purple.vim'
     Plug 'cocopon/iceberg.vim'
 
 """ athers
@@ -57,3 +62,4 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'rust-lang/rust.vim'
 
 call plug#end()
+

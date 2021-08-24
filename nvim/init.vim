@@ -18,7 +18,8 @@ noremap <Space>q :q<CR>
 let g:ctrlp_map = '<Space>p'
 let g:ctrlp_cmd = 'CtrlP'
 " let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
-"
+
+" vim-fz
 "nnoremap <Space>p :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
 "      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
 "      \ : 'Fz'<CR>
@@ -27,6 +28,12 @@ let g:ctrlp_cmd = 'CtrlP'
 "    \ 'list': uniq(map(split(globpath(&rtp, "colors/*.vim"), "\n"), "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')")),
 "    \ 'accept': {result->execute('colorscheme ' . result['items'][0])},
 "    \ })
+""""""""""""""""""""
+""""""""""""""""""""
+" git
+nnoremap <silent> gs :Gstatus<CR><C-w>T                                    
+nnoremap <silent> gps :Gpush<CR>                                    
+nnoremap <silent> gpl :Gpull<CR>                                    
 """"""""""""""""""""
 
 """"""""""""""""""""
@@ -53,9 +60,10 @@ noremap <Space>dd :bdelete<CR>
 "noremap <silent><C-l> <C-w>l
 
 " vs 画面分割
-noremap <C-w>- :vs<CR>
+noremap <C-w>- :vsplit<CR><C-w>=
+"noremap <C-w>= :split<CR>
 "noremap ss :split<CR><C-w>w
-noremap <Space>vv :vsplit<CR><C-w><CR>
+"noremap <Space>vv :vsplit<CR><C-w><CR>
 " vsplit move
 noremap ;; <C-w>w
 noremap ;' <C-w>W
@@ -95,7 +103,7 @@ set ruler                                                       " カーソル�
 set cursorline                                                  " カーソルハイライト
 " tab setting
 set expandtab                                                   " tabを複数のspaceに置き換え
-set tabstop=2                                                   " tabは半角2文字
+set tabstop=4                                                   " tabは半角2文字
 set shiftwidth=4                                                " tabの幅
 " filetype indent on
 set autoindent
@@ -127,7 +135,8 @@ endif
 "
 "" If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
-"
+
+
 " UltiSnips スニペット展開
 let g:UltiSnipsExpandTrigger="<c-k>"
 " UltiSnips スニペット次の位置に移動
@@ -193,7 +202,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " defx key bind
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/defx.vim'))
+if filereadable(expand('~/.config/nvim/plugins/defx.vim---'))
   source ~/.config/nvim/plugins/defx.vim
 endif
 """"""""""""""""""""""""""""""""""""""""""
@@ -230,10 +239,6 @@ endif
 
 
 
-" let g:AutoClosePairs = "() {} \""
-" let g:AutoClosePairs_add = "<> |"
-
-
 """"""""""""""""""""""""""""""""""""""""""
 " highlight 情報取得関数
 """"""""""""""""""""""""""""""""""""""""""
@@ -248,7 +253,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/coc---.vim'))
+if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
   source ~/.config/nvim/plugins/coc.vim
 endif
 """"""""""""""""""""""""""""""""""""""""""
@@ -299,5 +304,6 @@ endif
 "  autocmd!
 "  autocmd BufRead * highlight Normal guibg='#05051b'
 "augroup END
+
 
 

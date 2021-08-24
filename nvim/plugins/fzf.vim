@@ -33,11 +33,12 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffse
 let mapleader = "\<Space>"
 
 " fzf
-nnoremap <silent> <leader>F :Files ~<CR>
-nnoremap <silent> <leader>fz :FZF<CR>
-nnoremap <silent> <leader>g :GFiles<CR>
-nnoremap <silent> <leader>G :GFiles?<CR>
-nnoremap <silent> <leader>fb :Buffers<CR>
-nnoremap <silent> <leader>fh :History<CR>
-nnoremap <silent> <leader>fr :Rg<CR>
+nnoremap <silent> <Space>F :Files ~<CR>
+" nnoremap <silent> <leader>fz :FZF<CR>
+nnoremap <silent> ,f :FZF<CR>
+nnoremap <silent> <Space>g :GFiles<CR>
+nnoremap <silent> <Space>G :GFiles?<CR>
+nnoremap <silent> <Space>fb :Buffers<CR>
+nnoremap <silent> <Space>fh :History<CR>
+nnoremap <silent> <Space>fr :Rg<CR>
 

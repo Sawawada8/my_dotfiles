@@ -338,12 +338,27 @@ alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 # ####################################################
 # pyenv setting
 # ####################################################
-#set -Ux PYENV_ROOT $HOME/.pyenv
-#set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin
 #status is-interactive; and pyenv init --path | source
-#pyenv init - | source
+pyenv init - | source
 # ####################################################
 #
+# node
+set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
+# goenv
+set -Ux GOENV_ROOT $HOME/.goenv
+set -U fish_user_paths $GOENV_ROOT/bin $fish_user_paths
+goenv init - | source
+# gopath
+set -U fish_user_paths $GOROOT/bin $fish_user_paths
+set -U fish_user_paths $GOPATH/bin $fish_user_paths
+# rust
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
+# bass source ~/.config/fish/tmux_load.sh
 # bass source ~/.config/fish/pyenv-set
-#
-bass source ~/.config/fish/tmux_load.sh
+
+
+
+
