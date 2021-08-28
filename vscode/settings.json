@@ -137,6 +137,5 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
-  },
-  "diffEditor.ignoreTrimWhitespace": false
+  }
 }

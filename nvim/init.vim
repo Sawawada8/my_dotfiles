@@ -120,9 +120,9 @@ endif
 " vim-plug 
 " :PlugInstall 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
+"if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
   source ~/.config/nvim/modules/plug.rc.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " end vim-plug 
 """"""""""""""""""""""""""""""""""""""""""
@@ -152,9 +152,7 @@ set runtimepath+=~/.config/nvim/plugins/snippets
 """"""""""""""""""""""""""""""""""""""""""
 " dein pack load 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/dein_load.vim---'))
-  source ~/.config/nvim/plugins/dein_load.vim
-endif
+" source ~/.config/nvim/plugins/dein_load.vim
 """"""""""""""""""""""""""""""""""""""""""
 "" dein end
 """"""""""""""""""""""""""""""""""""""""""
@@ -163,9 +161,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " color scheme
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/color_scheme.vim'))
-  source ~/.config/nvim/modules/color_scheme.vim
-endif
+source ~/.config/nvim/modules/color_scheme.vim
 """"""""""""""""""""""""""""""""""""""""""
 " color scheme end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -175,9 +171,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " vim air line 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/air_line.vim'))
-  source ~/.config/nvim/plugins/air_line.vim
-endif
+source ~/.config/nvim/plugins/air_line.vim
 """"""""""""""""""""""""""""""""""""""""""
 " vim air line end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -186,13 +180,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/color_conf.vim---'))
-  source ~/.config/nvim/modules/color_conf.vim
-endif
+" source ~/.config/nvim/modules/color_conf.vim
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""
-
 
 "hi airline_tabfill ctermfg=49 ctermbg=100
 "hi airline_tabsel ctermfg=49 ctermbg=100
@@ -202,21 +193,18 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " defx key bind
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/defx.vim---'))
-  source ~/.config/nvim/plugins/defx.vim
-endif
+" source ~/.config/nvim/plugins/defx.vim
 """"""""""""""""""""""""""""""""""""""""""
 " defx vim end 
 """"""""""""""""""""""""""""""""""""""""""
 
-" set runtimepath+=/usr/local/bin/fzf
 
 """"""""""""""""""""""""""""""""""""""""""
 " fzf vim 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
-  source ~/.config/nvim/plugins/fzf.vim
-endif
+"if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
+source ~/.config/nvim/plugins/fzf.vim
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " fzf vim end
 """"""""""""""""""""""""""""""""""""""""""
@@ -224,9 +212,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " Fern vim 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
+"if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
   source ~/.config/nvim/plugins/fern.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " Fern vim end
 """"""""""""""""""""""""""""""""""""""""""
@@ -242,9 +230,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " highlight 情報取得関数
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
-  source ~/.config/nvim/plugins/SyntaxInfo.vim
-endif
+"if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
+"  source ~/.config/nvim/plugins/SyntaxInfo.vim
+"endif
 """"""""""""""""""""""""""""""""""""""
 " highlight end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -253,9 +241,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
+"if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
   source ~/.config/nvim/plugins/coc.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim end
 """"""""""""""""""""""""""""""""""""""""""
