@@ -328,6 +328,7 @@ alias ll "exa -l"
 
 # alias ide "source ~/.my_config/zsh/ide"
 alias ide "source ~/.my_config/zsh/fish_ide"
+alias ideconf "nvim ~/.my_config/zsh/fish_ide"
 # alias dockerrun="source ~/my_scripts/doc.sh"
 # alias dockerrun="~/my_scripts/doc.sh"
 #
