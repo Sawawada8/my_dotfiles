@@ -320,11 +320,13 @@ alias fconf "nvim ~/.config/fish/config.fish"
 alias fload "source ~/.config/fish/config.fish"
 alias nvconf "nvim ~/.config/nvim/init.vim"
 alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
+alias gconf "nvim ~/.gitconfig"
 alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
 alias l. "exa -ld -g --icons .*"
-alias l "exa -l -g --icons"
-alias ll "exa -l"
+alias ll "exa -l -g --icons"
+# alias ll "exa -l"
 
 # alias ide "source ~/.my_config/zsh/ide"
 alias ide "source ~/.my_config/zsh/fish_ide"
@@ -356,6 +358,8 @@ set -U fish_user_paths $GOROOT/bin $fish_user_paths
 set -U fish_user_paths $GOPATH/bin $fish_user_paths
 # rust
 set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+# haskell
+# set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 
 # bass source ~/.config/fish/tmux_load.sh
 # bass source ~/.config/fish/pyenv-set

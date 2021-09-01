@@ -155,5 +155,6 @@
     // "rgb(30, 144, 255)",
     // "rgb(70, 110, 230)",
     // "rgb(127, 255, 212)"
-  ]
+  ],
+  "haskell.ghcMod.executablePath": "stack"
 }
