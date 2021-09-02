@@ -326,6 +326,7 @@ alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
 alias l. "exa -ld -g --icons .*"
 alias ll "exa -l -g --icons"
+alias tr "tree -a -I '.git|node_modules|vendor|target' -f"
 # alias ll "exa -l"
 
 # alias ide "source ~/.my_config/zsh/ide"
