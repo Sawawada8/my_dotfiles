@@ -110,6 +110,8 @@ set autoindent
 set smartindent
 "set ai
 "set si
+set shell=/usr/local/bin/fish
+
 
 if &compatible    
   set nocompatible               " Be iMproved    
