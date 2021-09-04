@@ -320,6 +320,8 @@ alias fconf "nvim ~/.config/fish/config.fish"
 alias fload "source ~/.config/fish/config.fish"
 alias nvconf "nvim ~/.config/nvim/init.vim"
 alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
+alias tmconf "nvim ~/.tmux.conf"
+alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
 alias gconf "nvim ~/.gitconfig"
 alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias l "exa -la -g --icons"
@@ -338,6 +340,9 @@ alias ide3 "source ~/.my_config/zsh/fish_ide3"
 alias ideconf "nvim ~/.my_config/zsh/fish_ide"
 # alias dockerrun="source ~/my_scripts/doc.sh"
 # alias dockerrun="~/my_scripts/doc.sh"
+#
+alias tma "tmux attach"
+alias tmnew "tmux new -s"
 #
 # dotfiles sync #########################################
 alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
