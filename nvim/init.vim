@@ -182,7 +182,7 @@ source ~/.config/nvim/plugins/air_line.vim
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""
-" source ~/.config/nvim/modules/color_conf.vim
+source ~/.config/nvim/modules/color_conf.vim
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""

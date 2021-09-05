@@ -111,7 +111,6 @@
 "terminal.integrated.macOptionClickForcesSelection": true,
 "files.autoSave": "onFocusChange",
 "editor.cursorStyle": "line",
-"editor.lineNumbers": "relative",
 "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 "files.autoGuessEncoding": true,
   // "editor.lineHeight": 0,

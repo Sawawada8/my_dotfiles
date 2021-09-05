@@ -348,6 +348,8 @@ alias tmnew "tmux new -s"
 alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
 alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 
+# zazu plug dev
+alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
 # ####################################################
 # pyenv setting
 # ####################################################
@@ -357,8 +359,12 @@ set -U fish_user_paths $PYENV_ROOT/bin
 pyenv init - | source
 # ####################################################
 #
-# node
-set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
+# nodebrew
+# set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
+# nodeenv
+# set -U fish_user_paths $HOME/.nodenv/bin $fish_user_paths
+# ndenv init - | source
+#
 # goenv
 set -Ux GOENV_ROOT $HOME/.goenv
 set -U fish_user_paths $GOENV_ROOT/bin $fish_user_paths
@@ -374,6 +380,7 @@ set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # bass source ~/.config/fish/tmux_load.sh
 # bass source ~/.config/fish/pyenv-set
 
-
-
+# anyenv
+set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+anyenv init - | source
 
