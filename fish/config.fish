@@ -343,20 +343,23 @@ alias ideconf "nvim ~/.my_config/zsh/fish_ide"
 #
 alias tma "tmux attach"
 alias tmnew "tmux new -s"
+
+# alias fz-w "ls -a ~/WORK | fzf"
 #
 # dotfiles sync #########################################
 alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
 alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 
+alias lsofip "lsof -i -P | grep "LISTEN""
 # zazu plug dev
-alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
+# alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
 # ####################################################
 # pyenv setting
 # ####################################################
-set -Ux PYENV_ROOT $HOME/.pyenv
-set -U fish_user_paths $PYENV_ROOT/bin
+# set -Ux PYENV_ROOT $HOME/.pyenv
+# set -U fish_user_paths $PYENV_ROOT/bin
 #status is-interactive; and pyenv init --path | source
-pyenv init - | source
+# pyenv init - | source
 # ####################################################
 #
 # nodebrew

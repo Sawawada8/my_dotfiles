@@ -155,5 +155,6 @@
     // "rgb(70, 110, 230)",
     // "rgb(127, 255, 212)"
   ],
-  "haskell.ghcMod.executablePath": "stack"
+  "haskell.ghcMod.executablePath": "stack",
+  "diffEditor.ignoreTrimWhitespace": false
 }
