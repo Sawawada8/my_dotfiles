@@ -310,6 +310,30 @@ function fish_prompt
   #prompt_segment2 normal yellow \n'❯'
 end
 
+
+# by @GReagle@github
+# https://github.com/fish-shell/fish-shell/issues/1963#issuecomment-93775067
+function bind_global_alias
+        switch (commandline -t)
+  case "l"
+    commandline -rt '| less'
+  case "f"
+    commandline -rt '| fzf'
+  case "h"
+    commandline -rt '| head'
+  case "t"
+    commandline -rt '| tail'
+  case "g"
+    commandline -rt '| grep'
+  case "w"
+    commandline -rt '| wc'
+  case "cc"
+    commandline -rt '| ccze -A'
+  end
+end
+
+bind \cx bind_global_alias
+
 # starship init fish | source
 # ####################################################
 alias ... "cd ../.."
@@ -351,6 +375,8 @@ alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
 alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 
 alias lsofip "lsof -i -P | grep "LISTEN""
+
+alias psfz "ps aux | fzf"
 # zazu plug dev
 # alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
 # ####################################################
