@@ -377,6 +377,14 @@ alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 alias lsofip "lsof -i -P | grep "LISTEN""
 
 alias psfz "ps aux | fzf"
+
+alias c "cmemo"
+alias cc "cmemo -c"
+alias cconf "nvim ~/.cli_memo_app/memos/"
+
+# rails new api
+alias rails_new_api "docker run -d -v (pwd):/project rails_new_create__api_postgres:2.0.0"
+
 # zazu plug dev
 # alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
 # ####################################################
@@ -395,14 +403,14 @@ alias psfz "ps aux | fzf"
 # ndenv init - | source
 #
 # goenv
-set -Ux GOENV_ROOT $HOME/.goenv
-set -U fish_user_paths $GOENV_ROOT/bin $fish_user_paths
-goenv init - | source
-# gopath
-set -U fish_user_paths $GOROOT/bin $fish_user_paths
-set -U fish_user_paths $GOPATH/bin $fish_user_paths
+#set -Ux GOENV_ROOT $HOME/.goenv
+#set -U fish_user_paths $GOENV_ROOT/bin
+#goenv init - | source
+## gopath
+#set -U fish_user_paths $GOROOT/bin $fish_user_paths
+#set -U fish_user_paths $GOPATH/bin $fish_user_paths
 # rust
-set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+set -U fish_user_paths $HOME/.cargo/bin
 # haskell
 # set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 
@@ -413,3 +421,21 @@ set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
 anyenv init - | source
 
+#####
+#set -g GOENV_ROOT $HOME/.goenv
+#set -g fish_user_paths $GOENV_ROOT/bin $fish_user_paths
+#goenv init - | source
+## gopath
+#set -g fish_user_paths $GOROOT/bin $fish_user_paths
+#set -g fish_user_paths $GOPATH/bin $fish_user_paths
+## rust
+#set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
+## haskell
+## set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+#
+## bass source ~/.config/fish/tmux_load.sh
+## bass source ~/.config/fish/pyenv-set
+#
+## anyenv
+#set -g fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+#anyenv init - | source
