@@ -35,6 +35,9 @@ call plug#begin('~/.config/nvim/plugged')
 """ fuzzy    
     " Plug 'mattn/vim-fz'
 
+""" .editorconfig
+    Plug 'editorconfig/editorconfig-vim'
+
 """ airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

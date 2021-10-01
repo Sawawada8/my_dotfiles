@@ -112,6 +112,8 @@ set smartindent
 "set si
 set shell=/usr/local/bin/fish
 
+set list
+set listchars=tab:->,trail:_
 
 if &compatible    
   set nocompatible               " Be iMproved    

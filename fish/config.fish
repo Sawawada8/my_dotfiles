@@ -340,6 +340,7 @@ alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
 alias nv "nvim"
+
 alias fconf "nvim ~/.config/fish/config.fish"
 alias fload "source ~/.config/fish/config.fish"
 alias nvconf "nvim ~/.config/nvim/init.vim"
@@ -347,14 +348,21 @@ alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
 alias tmconf "nvim ~/.tmux.conf"
 alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
 alias gconf "nvim ~/.gitconfig"
-alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
+
+alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
+
 alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
 alias l. "exa -ld -g --icons .*"
 alias ll "exa -l -g --icons"
-alias tr "tree -a -I '.git|node_modules|vendor|target' -f"
+
+alias tr "tree -a -I '.git|.next|node_modules|vendor|target'"
+alias trf "tree -a -I '.git|.next|node_modules|vendor|target' -f"
+
 alias w "z WORK"
 alias d "z Dev_DEMO"
+alias g "cd ~/GitHub/"
+
 alias hosts "sudo nvim /etc/hosts"
 # alias ll "exa -l"
 
@@ -378,9 +386,11 @@ alias lsofip "lsof -i -P | grep "LISTEN""
 
 alias psfz "ps aux | fzf"
 
+# cli_memo_app 
 alias c "cmemo"
 alias cc "cmemo -c"
 alias cconf "nvim ~/.cli_memo_app/memos/"
+alias zc "cd ~/.cli_memo_app/memos/"
 
 # rails new api
 alias rails_new_api "docker run -d -v (pwd):/project rails_new_create__api_postgres:2.0.0"
