@@ -17,7 +17,7 @@ noremap <Space>q :q<CR>
 " ctrlp file search
 let g:ctrlp_map = '<Space>p'
 let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
+let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
 
 " vim-fz
 "nnoremap <Space>p :execute system('git rev-parse --is-inside-work-tree') =~ 'true'

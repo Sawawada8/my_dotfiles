@@ -30,7 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 """ ctrlP
     Plug 'ctrlpvim/ctrlp.vim'
-    " Plug 'mattn/ctrlp-matchfuzzy'
+    Plug 'mattn/ctrlp-matchfuzzy'
  
 """ fuzzy    
     " Plug 'mattn/vim-fz'
