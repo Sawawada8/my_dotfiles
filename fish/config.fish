@@ -432,6 +432,8 @@ set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
 # anyenv init - | source
 alias anyenv-start "anyenv init - | source"
 
+set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
+
 #####
 #set -g GOENV_ROOT $HOME/.goenv
 #set -g fish_user_paths $GOENV_ROOT/bin $fish_user_paths
