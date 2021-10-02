@@ -111,7 +111,6 @@
 "terminal.integrated.macOptionClickForcesSelection": true,
 "files.autoSave": "onFocusChange",
 "editor.cursorStyle": "line",
-"editor.lineNumbers": "relative",
 "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 "files.autoGuessEncoding": true,
   // "editor.lineHeight": 0,
@@ -138,5 +137,24 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
+  "bracket-pair-colorizer-2.colors": [
+    // "rgb(95, 158, 160)",
+    // "rgb(198, 198, 0)",
+    // "rgb(207, 65, 0)",
+    // "rgb(208, 208, 0)",
+    "#e2a478",
+    // "#84a0c6",
+    // "#89b8c2",
+    "#e27878",
+    // "#e98989"
+    // "rgb(62, 255, 155)",
+    // "rgb(0, 241, 116)",
+    // "rgb(150, 150, 0)",
+    // "rgb(100, 149, 237)",
+    // "rgb(30, 144, 255)",
+    // "rgb(70, 110, 230)",
+    // "rgb(127, 255, 212)"
+  ],
+  "haskell.ghcMod.executablePath": "stack",
   "diffEditor.ignoreTrimWhitespace": false
 }

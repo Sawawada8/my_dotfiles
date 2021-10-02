@@ -17,8 +17,12 @@ noremap <Space>q :q<CR>
 " ctrlp file search
 let g:ctrlp_map = '<Space>p'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|git\|vendor'
 " let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
-"
+""""""""""""""""""""
+
+""""""""""""""""""""
+" vim-fz
 "nnoremap <Space>p :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
 "      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
 "      \ : 'Fz'<CR>
@@ -27,6 +31,12 @@ let g:ctrlp_cmd = 'CtrlP'
 "    \ 'list': uniq(map(split(globpath(&rtp, "colors/*.vim"), "\n"), "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')")),
 "    \ 'accept': {result->execute('colorscheme ' . result['items'][0])},
 "    \ })
+""""""""""""""""""""
+""""""""""""""""""""
+" git
+nnoremap <silent> gs :Gstatus<CR><C-w>T                                    
+nnoremap <silent> gps :Gpush<CR>                                    
+nnoremap <silent> gpl :Gpull<CR>                                    
 """"""""""""""""""""
 
 """"""""""""""""""""
@@ -53,9 +63,12 @@ noremap <Space>dd :bdelete<CR>
 "noremap <silent><C-l> <C-w>l
 
 " vs 画面分割
-noremap <C-w>- :vs<CR>
+noremap <C-w>- :vsplit<CR><C-w>=
+noremap sv :vsplit<CR><C-w>=
+noremap ss :split<CR><C-w>=
+"noremap <C-w>= :split<CR>
 "noremap ss :split<CR><C-w>w
-noremap <Space>vv :vsplit<CR><C-w><CR>
+"noremap <Space>vv :vsplit<CR><C-w><CR>
 " vsplit move
 noremap ;; <C-w>w
 noremap ;' <C-w>W
@@ -95,13 +108,17 @@ set ruler                                                       " カーソル�
 set cursorline                                                  " カーソルハイライト
 " tab setting
 set expandtab                                                   " tabを複数のspaceに置き換え
-set tabstop=2                                                   " tabは半角2文字
+set tabstop=4                                                   " tabは半角2文字
 set shiftwidth=4                                                " tabの幅
 " filetype indent on
 set autoindent
 set smartindent
 "set ai
 "set si
+set shell=/usr/local/bin/fish
+
+set list
+set listchars=tab:->,trail:_
 
 if &compatible    
   set nocompatible               " Be iMproved    
@@ -112,9 +129,9 @@ endif
 " vim-plug 
 " :PlugInstall 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
+"if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
   source ~/.config/nvim/modules/plug.rc.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " end vim-plug 
 """"""""""""""""""""""""""""""""""""""""""
@@ -127,7 +144,8 @@ endif
 "
 "" If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
-"
+
+
 " UltiSnips スニペット展開
 let g:UltiSnipsExpandTrigger="<c-k>"
 " UltiSnips スニペット次の位置に移動
@@ -143,9 +161,7 @@ set runtimepath+=~/.config/nvim/plugins/snippets
 """"""""""""""""""""""""""""""""""""""""""
 " dein pack load 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/dein_load.vim---'))
-  source ~/.config/nvim/plugins/dein_load.vim
-endif
+" source ~/.config/nvim/plugins/dein_load.vim
 """"""""""""""""""""""""""""""""""""""""""
 "" dein end
 """"""""""""""""""""""""""""""""""""""""""
@@ -154,9 +170,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " color scheme
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/color_scheme.vim'))
-  source ~/.config/nvim/modules/color_scheme.vim
-endif
+source ~/.config/nvim/modules/color_scheme.vim
 """"""""""""""""""""""""""""""""""""""""""
 " color scheme end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -166,9 +180,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " vim air line 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/air_line.vim'))
-  source ~/.config/nvim/plugins/air_line.vim
-endif
+source ~/.config/nvim/plugins/air_line.vim
 """"""""""""""""""""""""""""""""""""""""""
 " vim air line end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -177,13 +189,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/modules/color_conf.vim---'))
-  source ~/.config/nvim/modules/color_conf.vim
-endif
+source ~/.config/nvim/modules/color_conf.vim
 """"""""""""""""""""""""""""""""""""""""""
 " active window color clear
 """"""""""""""""""""""""""""""""""""""""""
-
 
 "hi airline_tabfill ctermfg=49 ctermbg=100
 "hi airline_tabsel ctermfg=49 ctermbg=100
@@ -193,21 +202,18 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " defx key bind
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/defx.vim'))
-  source ~/.config/nvim/plugins/defx.vim
-endif
+" source ~/.config/nvim/plugins/defx.vim
 """"""""""""""""""""""""""""""""""""""""""
 " defx vim end 
 """"""""""""""""""""""""""""""""""""""""""
 
-" set runtimepath+=/usr/local/bin/fzf
 
 """"""""""""""""""""""""""""""""""""""""""
 " fzf vim 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
-  source ~/.config/nvim/plugins/fzf.vim
-endif
+"if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
+source ~/.config/nvim/plugins/fzf.vim
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " fzf vim end
 """"""""""""""""""""""""""""""""""""""""""
@@ -215,9 +221,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 " Fern vim 
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
+"if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
   source ~/.config/nvim/plugins/fern.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 " Fern vim end
 """"""""""""""""""""""""""""""""""""""""""
@@ -230,16 +236,12 @@ endif
 
 
 
-" let g:AutoClosePairs = "() {} \""
-" let g:AutoClosePairs_add = "<> |"
-
-
 """"""""""""""""""""""""""""""""""""""""""
 " highlight 情報取得関数
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
-  source ~/.config/nvim/plugins/SyntaxInfo.vim
-endif
+"if filereadable(expand('~/.config/nvim/plugins/SyntaxInfo.vim'))
+"  source ~/.config/nvim/plugins/SyntaxInfo.vim
+"endif
 """"""""""""""""""""""""""""""""""""""
 " highlight end 
 """"""""""""""""""""""""""""""""""""""""""
@@ -248,9 +250,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim
 """"""""""""""""""""""""""""""""""""""""""
-if filereadable(expand('~/.config/nvim/plugins/coc---.vim'))
+"if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
   source ~/.config/nvim/plugins/coc.vim
-endif
+"endif
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim end
 """"""""""""""""""""""""""""""""""""""""""
@@ -299,5 +301,6 @@ endif
 "  autocmd!
 "  autocmd BufRead * highlight Normal guibg='#05051b'
 "augroup END
+
 
 

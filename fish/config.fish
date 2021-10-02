@@ -310,40 +310,143 @@ function fish_prompt
   #prompt_segment2 normal yellow \n'❯'
 end
 
+
+# by @GReagle@github
+# https://github.com/fish-shell/fish-shell/issues/1963#issuecomment-93775067
+function bind_global_alias
+        switch (commandline -t)
+  case "l"
+    commandline -rt '| less'
+  case "f"
+    commandline -rt '| fzf'
+  case "h"
+    commandline -rt '| head'
+  case "t"
+    commandline -rt '| tail'
+  case "g"
+    commandline -rt '| grep'
+  case "w"
+    commandline -rt '| wc'
+  case "cc"
+    commandline -rt '| ccze -A'
+  end
+end
+
+bind \cx bind_global_alias
+
 # starship init fish | source
 # ####################################################
 alias ... "cd ../.."
 alias .... "cd ../../.."
 alias ..... "cd ../../../.."
 alias nv "nvim"
+
 alias fconf "nvim ~/.config/fish/config.fish"
 alias fload "source ~/.config/fish/config.fish"
 alias nvconf "nvim ~/.config/nvim/init.vim"
 alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
-alias createED "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias tmconf "nvim ~/.tmux.conf"
+alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
+alias gconf "nvim ~/.gitconfig"
+
+alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
+
+alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
 alias l. "exa -ld -g --icons .*"
-alias l "exa -l -g --icons"
-alias ll "exa -l"
+alias ll "exa -l -g --icons"
+
+alias tr "tree -a -I '.git|.next|node_modules|vendor|target'"
+alias trf "tree -a -I '.git|.next|node_modules|vendor|target' -f"
+
+alias w "z WORK"
+alias d "z Dev_DEMO"
+alias g "cd ~/GitHub/"
+
+alias hosts "sudo nvim /etc/hosts"
+# alias ll "exa -l"
 
 # alias ide "source ~/.my_config/zsh/ide"
 alias ide "source ~/.my_config/zsh/fish_ide"
+alias ide3 "source ~/.my_config/zsh/fish_ide3"
+alias ideconf "nvim ~/.my_config/zsh/fish_ide"
 # alias dockerrun="source ~/my_scripts/doc.sh"
 # alias dockerrun="~/my_scripts/doc.sh"
+#
+alias tma "tmux attach"
+alias tmnew "tmux new -s"
+
+# alias fz-w "ls -a ~/WORK | fzf"
 #
 # dotfiles sync #########################################
 alias .rsync "source ~/my_scripts/dotfile_rsync.sh"
 alias .rsyncconf "nvim ~/my_scripts/dotfile_rsync.sh"
 
+alias lsofip "lsof -i -P | grep "LISTEN""
+
+alias psfz "ps aux | fzf"
+
+# cli_memo_app 
+alias c "cmemo"
+alias cc "cmemo -c"
+alias cconf "nvim ~/.cli_memo_app/memos/"
+alias zc "cd ~/.cli_memo_app/memos/"
+
+# rails new api
+alias rails_new_api "docker run -d -v (pwd):/project rails_new_create__api_postgres:2.0.0"
+
+# zazu plug dev
+# alias zazudev "nvim ~/.zazu/plugins/tinytacoteam/command-memo/"
 # ####################################################
 # pyenv setting
 # ####################################################
-#set -Ux PYENV_ROOT $HOME/.pyenv
-#set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+# set -Ux PYENV_ROOT $HOME/.pyenv
+# set -U fish_user_paths $PYENV_ROOT/bin
 #status is-interactive; and pyenv init --path | source
-#pyenv init - | source
+# pyenv init - | source
 # ####################################################
 #
-# bass source ~/.config/fish/pyenv-set
+# nodebrew
+# set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
+# nodeenv
+# set -U fish_user_paths $HOME/.nodenv/bin $fish_user_paths
+# ndenv init - | source
 #
-bass source ~/.config/fish/tmux_load.sh
+# goenv
+#set -Ux GOENV_ROOT $HOME/.goenv
+#set -U fish_user_paths $GOENV_ROOT/bin
+#goenv init - | source
+## gopath
+#set -U fish_user_paths $GOROOT/bin $fish_user_paths
+#set -U fish_user_paths $GOPATH/bin $fish_user_paths
+# rust
+set -U fish_user_paths $HOME/.cargo/bin
+# haskell
+# set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+
+# bass source ~/.config/fish/tmux_load.sh
+# bass source ~/.config/fish/pyenv-set
+
+# anyenv
+set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+# anyenv init - | source
+alias anyenv-start "anyenv init - | source"
+
+#####
+#set -g GOENV_ROOT $HOME/.goenv
+#set -g fish_user_paths $GOENV_ROOT/bin $fish_user_paths
+#goenv init - | source
+## gopath
+#set -g fish_user_paths $GOROOT/bin $fish_user_paths
+#set -g fish_user_paths $GOPATH/bin $fish_user_paths
+## rust
+#set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
+## haskell
+## set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+#
+## bass source ~/.config/fish/tmux_load.sh
+## bass source ~/.config/fish/pyenv-set
+#
+## anyenv
+#set -g fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+#anyenv init - | source
