@@ -10,7 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'lambdalisue/glyph-palette.vim'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-""" defx
+""" defx filer
 "    if has('nvim')
 "        Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 "    else
@@ -24,16 +24,16 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'airblade/vim-gitgutter'
 
 """ fzf
-    Plug 'antoinemadec/FixCursorHold.nvim'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+"    Plug 'antoinemadec/FixCursorHold.nvim'
+"    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"    Plug 'junegunn/fzf.vim'
 
 """ ctrlP
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'mattn/ctrlp-matchfuzzy'
  
 """ fuzzy    
-    " Plug 'mattn/vim-fz'
+"    Plug 'mattn/vim-fz'
 
 """ .editorconfig
     Plug 'editorconfig/editorconfig-vim'

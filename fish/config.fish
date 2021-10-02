@@ -429,7 +429,8 @@ set -U fish_user_paths $HOME/.cargo/bin
 
 # anyenv
 set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
-anyenv init - | source
+# anyenv init - | source
+alias anyenv-start "anyenv init - | source"
 
 #####
 #set -g GOENV_ROOT $HOME/.goenv

@@ -19,7 +19,9 @@ let g:ctrlp_map = '<Space>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|git\|vendor'
 " let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
+""""""""""""""""""""
 
+""""""""""""""""""""
 " vim-fz
 "nnoremap <Space>p :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
 "      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
@@ -62,6 +64,8 @@ noremap <Space>dd :bdelete<CR>
 
 " vs 画面分割
 noremap <C-w>- :vsplit<CR><C-w>=
+noremap sv :vsplit<CR><C-w>=
+noremap ss :split<CR><C-w>=
 "noremap <C-w>= :split<CR>
 "noremap ss :split<CR><C-w>w
 "noremap <Space>vv :vsplit<CR><C-w><CR>
