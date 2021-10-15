@@ -352,6 +352,7 @@ alias gconf "nvim ~/.gitconfig"
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json"
 
 alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
