@@ -25,12 +25,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 """ fzf
 "    Plug 'antoinemadec/FixCursorHold.nvim'
-"    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
 """ ctrlP
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'mattn/ctrlp-matchfuzzy'
+"    Plug 'ctrlpvim/ctrlp.vim'
+"    Plug 'mattn/ctrlp-matchfuzzy'
  
 """ fuzzy    
 "    Plug 'mattn/vim-fz'
