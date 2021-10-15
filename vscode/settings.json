@@ -8,7 +8,7 @@
   "intelephense.diagnostics.undefinedMethods": false,
   "intelephense.diagnostics.undefinedProperties": false,
   "intelephense.diagnostics.undefinedTypes": false,
-	"intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "on",
@@ -29,19 +29,19 @@
       "before": ["j", "j"],
       "after": ["<Esc>", "<space>", "w"]
     }
-  ],// return normal when file save
+  ], // return normal when file save
   // "vim.insertModeKeyBindingsNonRecursive": [
   //     {
   //         "before": ["<C-d>"],
   //         "commands": ["deleteLeft"]
   //     }
   // ],
-//  "vim.normalModeKeyBindingsNonRecursive": [
- //   {
+  //  "vim.normalModeKeyBindingsNonRecursive": [
+  //   {
   //    "before": ["<Enter>"],
- //     "commands": ["editor.action.insertLineAfter"]
- //   }
- // ],
+  //     "commands": ["editor.action.insertLineAfter"]
+  //   }
+  // ],
 
   "vim.normalModeKeyBindings": [
     {
@@ -61,7 +61,7 @@
       "commands": ["workbench.action.files.save"]
     },
     {
-      "before": ["<leader>", "q"], 
+      "before": ["<leader>", "q"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
@@ -101,18 +101,15 @@
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "workbench.tree.renderIndentGuides": "always",
-"tabnine.experimentalAutoImports": true,
-"editor.minimap.maxColumn": 25,
-"terminal.integrated.fontFamily": "MesloLGL Nerd Font",
-"gitlens.codeLens.scopes": [
-    "document",
-    "containers"
-],
-"terminal.integrated.macOptionClickForcesSelection": true,
-"files.autoSave": "onFocusChange",
-"editor.cursorStyle": "line",
-"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-"files.autoGuessEncoding": true,
+  "tabnine.experimentalAutoImports": true,
+  "editor.minimap.maxColumn": 25,
+  "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+  "gitlens.codeLens.scopes": ["document", "containers"],
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "files.autoSave": "onFocusChange",
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "files.autoGuessEncoding": true,
   // "editor.lineHeight": 0,
   // "editor.formatOnSave": true
   "indentRainbow.colors": [
@@ -142,10 +139,12 @@
     // "rgb(198, 198, 0)",
     // "rgb(207, 65, 0)",
     // "rgb(208, 208, 0)",
-    "#e2a478",
+    // ice barge "#e2a478",
+    // "#e2a478",
     // "#84a0c6",
     // "#89b8c2",
-    "#e27878",
+    // ice barge "#e27878"
+    // "#e27878"
     // "#e98989"
     // "rgb(62, 255, 155)",
     // "rgb(0, 241, 116)",
@@ -154,7 +153,26 @@
     // "rgb(30, 144, 255)",
     // "rgb(70, 110, 230)",
     // "rgb(127, 255, 212)"
+    // "#c5c8d1",
+    // "#b6b7ba"
+    // "rgb(200,200,200)",
+    "rgb(180,180,180)",
+    "rgb(150,150,150)"
   ],
   "haskell.ghcMod.executablePath": "stack",
-  "diffEditor.ignoreTrimWhitespace": false
+  "go.toolsManagement.autoUpdate": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".php$",
+        "cmd": "prettier ${file} --write"
+      }
+    ]
+  },
+  // "editor.formatOnSave": true
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#999366",
+    "terminalCursor.foreground": "#b1a870"
+  }
 }

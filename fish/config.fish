@@ -348,6 +348,8 @@ alias nvpack "nvim ~/.config/nvim/modules/plug.rc.vim"
 alias tmconf "nvim ~/.tmux.conf"
 alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
 alias gconf "nvim ~/.gitconfig"
+# coc auto format config ....
+alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
 
@@ -362,6 +364,7 @@ alias trf "tree -a -I '.git|.next|node_modules|vendor|target' -f"
 alias w "z WORK"
 alias d "z Dev_DEMO"
 alias g "cd ~/GitHub/"
+alias o "open ."
 
 alias hosts "sudo nvim /etc/hosts"
 # alias ll "exa -l"
@@ -431,6 +434,8 @@ set -U fish_user_paths $HOME/.cargo/bin
 set -Ux fish_user_paths $HOME/.anyenv/bin $fish_user_paths
 # anyenv init - | source
 alias anyenv-start "anyenv init - | source"
+alias tmux-start "tmux new -s works"
+alias inwork "anyenv-start && tmux-start"
 
 set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 
@@ -452,3 +457,8 @@ set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 ## anyenv
 #set -g fish_user_paths $HOME/.anyenv/bin $fish_user_paths
 #anyenv init - | source
+#
+#
+# current my favorite project
+alias uitest "cd ~/Dev_DEMO/Next_js/selenium-uitest-ts"
+alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"

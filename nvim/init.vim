@@ -118,7 +118,7 @@ set smartindent
 set shell=/usr/local/bin/fish
 
 set list
-set listchars=tab:->,trail:_
+set listchars=tab:->,trail:-
 
 if &compatible    
   set nocompatible               " Be iMproved    
@@ -301,6 +301,4 @@ source ~/.config/nvim/plugins/fzf.vim
 "  autocmd!
 "  autocmd BufRead * highlight Normal guibg='#05051b'
 "augroup END
-
-
 

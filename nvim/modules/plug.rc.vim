@@ -63,6 +63,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'rust-lang/rust.vim'
+    Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
