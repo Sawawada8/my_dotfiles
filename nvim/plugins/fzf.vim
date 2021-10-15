@@ -34,9 +34,10 @@ let mapleader = "\<Space>"
 
 " fzf
 nnoremap <silent> <Space>F :Files ~<CR>
-nnoremap <silent> <Space>f :FZF .<CR>
-" nnoremap <silent> <leader>fz :FZF<CR>
+" nnoremap <silent> <Space>f :FZF .<CR>
+nnoremap <silent> <leader>fz :FZF<CR>
 nnoremap <silent> ,f :FZF<CR>
+nnoremap <silent> <Space>p :FZF<CR>
 nnoremap <silent> <Space>g :GFiles<CR>
 nnoremap <silent> <Space>G :GFiles?<CR>
 nnoremap <silent> <Space>fb :Buffers<CR>

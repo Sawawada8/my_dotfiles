@@ -15,9 +15,10 @@ noremap <Space>q :q<CR>
 
 """"""""""""""""""""
 " ctrlp file search
-let g:ctrlp_map = '<Space>p'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'node_modules\|git\|vendor'
+"let g:ctrlp_map = '<Space>p'
+"let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_custom_ignore = 'node_modules\|git\|vendor'
+"
 " let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
 """"""""""""""""""""
 
@@ -118,7 +119,7 @@ set smartindent
 set shell=/usr/local/bin/fish
 
 set list
-set listchars=tab:->,trail:_
+set listchars=tab:->,trail:-
 
 if &compatible    
   set nocompatible               " Be iMproved    
@@ -302,5 +303,13 @@ source ~/.config/nvim/plugins/fzf.vim
 "  autocmd BufRead * highlight Normal guibg='#05051b'
 "augroup END
 
-
+""""""""""""""""""""
+"function! s:find_git_root()
+"  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+"endfunction
+"
+"command! ProjectFiles execute 'Files' s:find_git_root()
+"
+"nnoremap <silent> <Space-p> :ProjectFiles<CR>
+"nnoremap <silent> <M-p> :History<CR>
 
