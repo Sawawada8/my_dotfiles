@@ -350,8 +350,10 @@ alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
 alias gconf "nvim ~/.gitconfig"
 # coc auto format config ....
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
+alias hyconf "nvim ~/.hyper.js"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json"
 
 alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
@@ -462,3 +464,9 @@ set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 # current my favorite project
 alias uitest "cd ~/Dev_DEMO/Next_js/selenium-uitest-ts"
 alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
+
+# open hyper webview 
+alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
+alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
+
+
