@@ -64,26 +64,46 @@ module.exports = {
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
+    //    colors: {
     colors: {
-      black: "#000000",
-      red: "#e68e8e",
-      green: "#83ac8e",
-      yellow: "#f5b78a",
-      blue: "#9bb8dc",
-      magenta: "#baace2",
-      cyan: "#00c5c7",
-      white: "#c7c7c7",
-      lightBlack: "#676767",
-      lightRed: "#ff6d67",
-      lightGreen: "#5ff967",
-      lightYellow: "#fefb67",
-      lightBlue: "#6871ff",
-      lightMagenta: "#ff76ff",
-      lightCyan: "#5ffdff",
-      lightWhite: "#feffff",
-      limeGreen: "#32CD32",
-      lightCoral: "#F08080",
+      black: "#1e2132",
+      red: "#e27878",
+      green: "#b4be82",
+      yellow: "#e2a478",
+      blue: "#84a0c6",
+      magenta: "#a093c7",
+      cyan: "#89b8c2",
+      white: "#c6c8d1",
+      lightBlack: "#6b7089",
+      lightRed: "#e98989",
+      lightGreen: "#c0ca8e",
+      lightYellow: "#e9b189",
+      lightBlue: "#91acd1",
+      lightMagenta: "#ada0d3",
+      lightCyan: "#95c4ce",
+      lightWhite: "#d2d4de",
     },
+
+    // old color iterm color
+    //      black: "#000000",
+    //      red: "#e68e8e",
+    //      green: "#83ac8e",
+    //      yellow: "#f5b78a",
+    //      blue: "#9bb8dc",
+    //      magenta: "#baace2",
+    //      cyan: "#00c5c7",
+    //      white: "#c7c7c7",
+    //      lightBlack: "#676767",
+    //      lightRed: "#ff6d67",
+    //      lightGreen: "#5ff967",
+    //      lightYellow: "#fefb67",
+    //      lightBlue: "#6871ff",
+    //      lightMagenta: "#ff76ff",
+    //      lightCyan: "#5ffdff",
+    //      lightWhite: "#feffff",
+    //      limeGreen: "#32CD32",
+    //      lightCoral: "#F08080",
+    // },
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
     //
@@ -150,7 +170,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     //"hyperterm-material", "hyper-transparent-bg", "hyper-overlay",
-    "hyper-iceberg",
+    // "hyper-iceberg",
     "hyperterm-summon",
   ],
   // in development, you can create a directory under
