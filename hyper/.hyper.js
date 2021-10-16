@@ -8,7 +8,7 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 15,
     // font family with optional fallbacks
     fontFamily:
       '"RictyDiminished Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -17,27 +17,32 @@ module.exports = {
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: "bold",
     // line height as a relative unit
-    lineHeight: 1,
+    lineHeight: 1.05,
     // letter spacing as a relative unit
     letterSpacing: 0,
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    // cursorColor: 'rgba(133,122,33,0.8)',
-    cursorColor: "rgba(233,122,33,0.8)",
+    // カーソルの色
+    cursorColor: "rgba(133,122,33,0.8)",
     // terminal text color under BLOCK cursor
+    cursorAccentColor: "rgb(26,11,235)",
     cursorAccentColor: "#000",
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
     cursorShape: "BLOCK",
     // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: false,
     // color of the text
-    foregroundColor: "rgba(5,5,27,0.6)",
+    // 基本文字色
+    foregroundColor: "#d1d2d3",
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: "#000",
+    // 背景色
+    backgroundColor: "rgba(5,5,27,0.45)",
     // terminal selection color
+    // 選択したときの色
     selectionColor: "rgba(248,28,229,0.3)",
     // border color (window, tabs)
     borderColor: "#333",
+    borderColor: "rgba(133,122,33,0.8)",
     // custom CSS to embed in the main window
     css: "",
     // custom CSS to embed in the terminal window
@@ -53,26 +58,27 @@ module.exports = {
     showWindowControls: "",
     // custom padding (CSS format, i.e.: `top right bottom left`)
     padding: "12px 14px",
+    // padding: "6px 7px",
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
       black: "#000000",
-      red: "#C51E14",
-      green: "#1DC121",
-      yellow: "#C7C329",
-      blue: "#0A2FC4",
-      magenta: "#C839C5",
-      cyan: "#20C5C6",
-      white: "#C7C7C7",
-      lightBlack: "#686868",
-      lightRed: "#FD6F6B",
-      lightGreen: "#67F86F",
-      lightYellow: "#FFFA72",
-      lightBlue: "#6A76FB",
-      lightMagenta: "#FD7CFC",
-      lightCyan: "#68FDFE",
-      lightWhite: "#FFFFFF",
+      red: "#e68e8e",
+      green: "#83ac8e",
+      yellow: "#1DC121",
+      blue: "#9bb8dc",
+      magenta: "#baace2",
+      cyan: "#00c5c7",
+      white: "#c7c7c7",
+      lightBlack: "#676767",
+      lightRed: "#ff6d67",
+      lightGreen: "#5ff967",
+      lightYellow: "#fefb67",
+      lightBlue: "#6871ff",
+      lightMagenta: "#ff76ff",
+      lightCyan: "#5ffdff",
+      lightWhite: "#feffff",
       limeGreen: "#32CD32",
       lightCoral: "#F08080",
     },
@@ -146,4 +152,3 @@ module.exports = {
   },
 };
 //# sourceMappingURL=config-default.js.map
-
