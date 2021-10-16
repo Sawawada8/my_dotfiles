@@ -464,3 +464,7 @@ set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 # current my favorite project
 alias uitest "cd ~/Dev_DEMO/Next_js/selenium-uitest-ts"
 alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
+
+# open hyper webview 
+alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
+

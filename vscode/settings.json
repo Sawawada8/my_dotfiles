@@ -170,7 +170,7 @@
       }
     ]
   },
-  "editor.formatOnSave": true,
+  // "editor.formatOnSave": true,
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#999366",
     "terminalCursor.foreground": "#b1a870"
