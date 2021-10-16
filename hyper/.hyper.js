@@ -57,7 +57,6 @@ module.exports = {
     // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
     showWindowControls: "",
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    // wondow padding
     padding: "12px 14px",
     // padding: "6px 7px",
     // the full list. if you're going to provide the full color palette,

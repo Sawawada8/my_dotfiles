@@ -350,6 +350,7 @@ alias tmborconf "nvim /usr/local/bin/tmux-pane-border"
 alias gconf "nvim ~/.gitconfig"
 # coc auto format config ....
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
+alias hyconf "nvim ~/.hyper.js"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json"
