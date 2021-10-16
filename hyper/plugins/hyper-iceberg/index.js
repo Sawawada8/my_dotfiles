@@ -1,11 +1,7 @@
 exports.decorateConfig = (config) => {
   return Object.assign({}, config, {
-    // original
-    // backgroundColor: "#161821",
-    // borderColor: "#272c42",
-    // custom
-    // backgroundColor: "rgba(5,5,27,0.7)",
-    // borderColor: "rgba(133,122,33,0.8)",
+    // backgroundColor: '#161821',
+    // borderColor: '#272c42',
     colors: {
       black: "#1e2132",
       red: "#e27878",
@@ -44,7 +40,7 @@ exports.decorateConfig = (config) => {
 				color: #6b7089;
 			}
 		`,
-    // cursorColor: "#c6c8d1",
+    // cursorColor: '#c6c8d1',
     foregroundColor: "#c6c8d1",
   });
 };

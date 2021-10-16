@@ -35,9 +35,10 @@ module.exports = {
     foregroundColor: "#d1d2d3",
     // terminal background color
     // opacity is only supported on macOS
+    // ////////////////////////
     // 背景色
     // backgroundColor: "rgba(5,5,27,0.45)",
-    backgroundColor: "rgba(5,5,27,0.7)",
+    backgroundColor: "rgba(5,5,27,0.78)",
     // terminal selection color
     // 選択したときの色
     selectionColor: "rgba(248,28,229,0.3)",
@@ -135,6 +136,11 @@ module.exports = {
     // set to true to disable auto updates
     disableAutoUpdates: false,
     // for advanced config flags please refer to https://hyper.is/#cfg
+    summon: {
+      hideDock: false,
+      hideOnBlur: true,
+      // hotkey: "Ctrl+Ctrl",
+    },
   },
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
@@ -142,7 +148,11 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-iceberg"],
+  plugins: [
+    //"hyperterm-material", "hyper-transparent-bg", "hyper-overlay",
+    "hyper-iceberg",
+    "hyperterm-summon",
+  ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed

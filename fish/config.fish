@@ -467,4 +467,6 @@ alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
 
 # open hyper webview 
 alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
+alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
+
 
