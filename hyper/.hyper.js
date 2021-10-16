@@ -10,8 +10,8 @@ module.exports = {
     // default font size in pixels for all tabs
     fontSize: 15,
     // font family with optional fallbacks
-    fontFamily:
-      '"RictyDiminished Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"RictyDiminished Nerd Font"',
+    // '"RictyDiminished Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
     // font weight for bold characters: 'normal' or 'bold'
@@ -36,12 +36,13 @@ module.exports = {
     // terminal background color
     // opacity is only supported on macOS
     // 背景色
-    backgroundColor: "rgba(5,5,27,0.45)",
+    // backgroundColor: "rgba(5,5,27,0.45)",
+    backgroundColor: "rgba(5,5,27,0.7)",
     // terminal selection color
     // 選択したときの色
     selectionColor: "rgba(248,28,229,0.3)",
     // border color (window, tabs)
-    borderColor: "#333",
+    // borderColor: "#333",
     borderColor: "rgba(133,122,33,0.8)",
     // custom CSS to embed in the main window
     css: "",
@@ -57,8 +58,8 @@ module.exports = {
     // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
     showWindowControls: "",
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: "12px 14px",
-    // padding: "6px 7px",
+    // padding: "12px 14px",
+    padding: "6px 7px",
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
@@ -66,7 +67,7 @@ module.exports = {
       black: "#000000",
       red: "#e68e8e",
       green: "#83ac8e",
-      yellow: "#1DC121",
+      yellow: "#f5b78a",
       blue: "#9bb8dc",
       magenta: "#baace2",
       cyan: "#00c5c7",
@@ -141,7 +142,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: ["hyper-iceberg"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
