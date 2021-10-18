@@ -353,7 +353,7 @@ alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 alias hyconf "nvim ~/.hyper.js"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
-alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json"
+alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json && cp ~/my_scripts/.prettierignore ./.prettierrcignore"
 
 alias l "exa -la -g --icons"
 alias la "exa -la -g --icons"
@@ -469,4 +469,6 @@ alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
 alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
 alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
 
+
+# starship init fish | source
 

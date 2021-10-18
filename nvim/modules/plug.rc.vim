@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'lambdalisue/nerdfont.vim'
     Plug 'lambdalisue/glyph-palette.vim'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'lambdalisue/fern-git-status.vim'
 
 """ defx filer
 "    if has('nvim')
