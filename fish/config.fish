@@ -351,6 +351,7 @@ alias gconf "nvim ~/.gitconfig"
 # coc auto format config ....
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 alias hyconf "nvim ~/.hyper.js"
+alias alconf "nvim ~/.config/alacritty/alacritty.yml"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json && cp ~/my_scripts/.prettierignore ./.prettierrcignore"
