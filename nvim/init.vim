@@ -118,8 +118,8 @@ set smartindent
 "set si
 set shell=/usr/local/bin/fish
 
+set listchars=tab:->,space:_,trail:-,eol:<,nbsp:%
 set list
-set listchars=tab:->,trail:-
 
 if &compatible    
   set nocompatible               " Be iMproved    
