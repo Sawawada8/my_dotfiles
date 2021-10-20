@@ -302,7 +302,7 @@ function fish_prompt
   prompt_user
   prompt_dir
   #__exists hg;  and prompt_hg
-  #__exists git; and 
+  #__exists git; and
   prompt_git
   __exists svn; and prompt_svn
   prompt_finish
@@ -369,6 +369,9 @@ alias d "z Dev_DEMO"
 alias g "cd ~/GitHub/"
 alias o "open ."
 
+# fzf (dir search) => cd
+alias f "cd (fd --max-depth 3 --type directory . ~ | fzf)"
+
 alias hosts "sudo nvim /etc/hosts"
 # alias ll "exa -l"
 
@@ -392,7 +395,7 @@ alias lsofip "lsof -i -P | grep "LISTEN""
 
 alias psfz "ps aux | fzf"
 
-# cli_memo_app 
+# cli_memo_app
 alias c "cmemo"
 alias cc "cmemo -c"
 alias cconf "nvim ~/.cli_memo_app/memos/"
@@ -466,7 +469,7 @@ set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 alias uitest "cd ~/Dev_DEMO/Next_js/selenium-uitest-ts"
 alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
 
-# open hyper webview 
+# open hyper webview
 alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
 alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
 
