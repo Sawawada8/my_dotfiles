@@ -370,7 +370,9 @@ alias g "cd ~/GitHub/"
 alias o "open ."
 
 # fzf (dir search) => cd
-alias f "cd (fd --max-depth 3 --type directory . ~ | fzf)"
+alias cdf "cd (fd --max-depth 3 --type directory . ~ | fzf)"
+alias opf "open (fd --max-depth 7 . ~ | fzf)"
+alias codef "code (fd --max-depth 3 --type directory . ~ | fzf)"
 
 alias hosts "sudo nvim /etc/hosts"
 # alias ll "exa -l"
@@ -443,7 +445,8 @@ alias anyenv-start "anyenv init - | source"
 alias tmux-start "tmux new -s works"
 alias inwork "anyenv-start && tmux-start"
 
-set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
+# set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
+set -x FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 
 #####
 #set -g GOENV_ROOT $HOME/.goenv
