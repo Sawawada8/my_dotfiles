@@ -35,7 +35,9 @@ noremap <Space>q :q<CR>
 """"""""""""""""""""
 """"""""""""""""""""
 " git
-nnoremap <silent> gs :Gstatus<CR><C-w>T
+nnoremap <silent> gis :Gstatus<CR><C-w>T
+" nnoremap <silent> gid :Gdiff<CR>
+nnoremap <silent> <Space>ggd :Gdiff<CR>
 nnoremap <silent> gps :Gpush<CR>
 nnoremap <silent> gpl :Gpull<CR>
 """"""""""""""""""""
@@ -322,3 +324,6 @@ source ~/.config/nvim/plugins/fzf.vim
 set termguicolors
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+
+command! -nargs=0 Format :call CocAction('format')
+

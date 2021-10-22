@@ -32,8 +32,8 @@ call plug#begin('~/.config/nvim/plugged')
 """ ctrlP
 "    Plug 'ctrlpvim/ctrlp.vim'
 "    Plug 'mattn/ctrlp-matchfuzzy'
- 
-""" fuzzy    
+
+""" fuzzy
 "    Plug 'mattn/vim-fz'
 
 """ .editorconfig
@@ -45,6 +45,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 """ coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"     Plug 'yaegassy/coc-blade-formatter', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
 
 """ colorscheme
     " Plug 'altercation/vim-colors-solarized'
@@ -58,13 +60,16 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
+""" lang pack
+    Plug 'sheerun/vim-polyglot'
+
 """ languages
     Plug 'StanAngeloff/php.vim'
     Plug 'elzr/vim-json'
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'rust-lang/rust.vim'
-    Plug 'leafgarland/typescript-vim'
+"    Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 

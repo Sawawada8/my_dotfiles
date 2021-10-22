@@ -95,6 +95,10 @@
     {
       "before": ["<leader>", "<C-r>"],
       "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": [";", ";"],
+      "commands": ["workbench.action.focusPreviousGroup"]
     }
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",

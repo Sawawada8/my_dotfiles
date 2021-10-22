@@ -352,6 +352,7 @@ alias gconf "nvim ~/.gitconfig"
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 alias hyconf "nvim ~/.hyper.js"
 alias alconf "nvim ~/.config/alacritty/alacritty.yml"
+alias hmconf "nvim ~/.hammerspoon/init.lua"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json && cp ~/my_scripts/.prettierignore ./.prettierrcignore"
@@ -369,7 +370,7 @@ alias d "z Dev_DEMO"
 alias g "cd ~/GitHub/"
 alias o "open ."
 
-# fzf (dir search) => cd
+# fd => fzf (dir search) => cd
 alias cdf "cd (fd --max-depth 3 --type directory . ~ | fzf)"
 alias opf "open (fd --max-depth 7 . ~ | fzf)"
 alias codef "code (fd --max-depth 3 --type directory . ~ | fzf)"

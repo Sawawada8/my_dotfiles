@@ -1,13 +1,28 @@
 -- ctrl ; hotkey ------------------------------
+--hs.hotkey.bind({"ctrl"}, ";", function()
+--  local alacritty = hs.application.find('alacritty')
+--  if alacritty:isFrontmost() then
+--    alacritty:hide()
+--  else
+--    hs.application.launchOrFocus("/Applications/Alacritty.app")
+--  end
+--end)
+-- --------------------------------------------
+
+-- ctrl ; hotkey ------------------------------
 hs.hotkey.bind({"ctrl"}, ";", function()
-  local alacritty = hs.application.find('alacritty')
+    -- print(hs.application.find('code'))
+    -- print(hs.application.find('alacritty'))
+  local alacritty = hs.application.find('code')
   if alacritty:isFrontmost() then
     alacritty:hide()
   else
-    hs.application.launchOrFocus("/Applications/Alacritty.app")
+    hs.application.launchOrFocus("/Applications/Visual Studio Code.app")
   end
 end)
 -- --------------------------------------------
+
+
 
 --ctrlDoublePress = require("ctrlDoublePress")
 --ctrlDoublePress.timeFrame = 4
@@ -90,7 +105,7 @@ end
 
 module.eventWatcher = eventtap.new({events.flagsChanged, events.keyDown}, function(ev)
     -- if it's been too long; previous state doesn't matter
-    print(timer.secondsSinceEpoch() - timeFirstControl)
+    -- print(timer.secondsSinceEpoch() - timeFirstControl)
     if (timer.secondsSinceEpoch() - timeFirstControl) > module.timeFrame then
         timeFirstControl, firstDown, secondDown = 0, false, false
     end

@@ -7,3 +7,4 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+"autocmd BufNewFile,BufRead *.blade.php set filetype=blade
