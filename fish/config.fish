@@ -399,7 +399,7 @@ alias lsofip "lsof -i -P | grep "LISTEN""
 alias psfz "ps aux | fzf"
 
 # cli_memo_app
-alias c "cmemo"
+alias c "cmemo -v"
 alias cc "cmemo -c"
 alias cconf "nvim ~/.cli_memo_app/memos/"
 alias zc "cd ~/.cli_memo_app/memos/"
