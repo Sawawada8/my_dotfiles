@@ -94,6 +94,8 @@ inoremap <C-a> <ESC><S-i>
 inoremap <C-e> <ESC><S-a>
 " inoremap <C-a> <ESC>100h
 
+noremap <Space>bf :call CocAction('format')<CR>
+
 " 補完
 "inoremap <C->
 " encode setting
