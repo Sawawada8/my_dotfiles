@@ -45,8 +45,8 @@
     "command": "cursorWordEndLeftSelect",
     "when": "textInputFocus"
   },
-  { /* line move */
-    "key": "ctrl+cmd+i",
+  {
+    /* line move */ "key": "ctrl+cmd+i",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -55,8 +55,8 @@
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  { /* current line copy */
-    "key": "ctrl+alt+i",
+  {
+    /* current line copy */ "key": "ctrl+alt+i",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -65,10 +65,10 @@
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-//   {
-//     "key": "ctrl+[Equal]",
-//     "command": "workbench.action.openEditorAtIndex"
-//   },
+  //   {
+  //     "key": "ctrl+[Equal]",
+  //     "command": "workbench.action.openEditorAtIndex"
+  //   },
   /* workspace move */
   {
     "key": "ctrl+cmd+[Quote]",
@@ -79,12 +79,13 @@
     "command": "workbench.action.focusPreviousGroup"
   },
   /* move focuse fileTree */
-//   { // jis setting
-//     "key": "ctrl+cmd+]",
-//     "command": "workbench.view.explorer",
-//     "when": "viewContainer.workbench.view.explorer.enabled"
-//   },
-  { // us setting
+  //   { // jis setting
+  //     "key": "ctrl+cmd+]",
+  //     "command": "workbench.view.explorer",
+  //     "when": "viewContainer.workbench.view.explorer.enabled"
+  //   },
+  {
+    // us setting
     "key": "ctrl+cmd+'",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
@@ -113,17 +114,33 @@
   },
   {
     "key": "ctrl+/",
-    "command": "workbench.action.terminal.focus",
+    "command": "workbench.action.terminal.focus"
     // "when": "editorTextFocus"
   },
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
   },
-  {// left text editor focus
+  {
+    // left text editor focus
     "key": "ctrl+/",
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+a",
+    "command": "git.stage",
+    "when": "isInDiffEditor"
   }
   /*
   {// latest open project

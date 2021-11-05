@@ -95,6 +95,10 @@
     {
       "before": ["<leader>", "<C-r>"],
       "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": [";", ";"],
+      "commands": ["workbench.action.focusPreviousGroup"]
     }
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -158,6 +162,7 @@
     // "rgb(200,200,200)",
     // "#999366",
     // "#b1a870",
+    // "rgb(180,180,180)",
     // "rgb(180,180,180)",
     "rgb(160,160,160)",
     "rgb(150,150,150)"

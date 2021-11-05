@@ -35,9 +35,11 @@ noremap <Space>q :q<CR>
 """"""""""""""""""""
 """"""""""""""""""""
 " git
-nnoremap <silent> gs :Gstatus<CR><C-w>T                                    
-nnoremap <silent> gps :Gpush<CR>                                    
-nnoremap <silent> gpl :Gpull<CR>                                    
+nnoremap <silent> gis :Gstatus<CR><C-w>T
+" nnoremap <silent> gid :Gdiff<CR>
+nnoremap <silent> <Space>ggd :Gdiff<CR>
+nnoremap <silent> gps :Gpush<CR>
+nnoremap <silent> gpl :Gpull<CR>
 """"""""""""""""""""
 
 """"""""""""""""""""
@@ -58,7 +60,7 @@ noremap <Space>; :bprev<CR>
 noremap <Space>dd :bdelete<CR>
 
 " ＜追加＞分割画面移動
-"noremap <silent><C-h> <C-w>h                                    
+"noremap <silent><C-h> <C-w>h
 "noremap <silent><C-j> <C-w>j
 "noremap <silent><C-k> <C-w>k
 "noremap <silent><C-l> <C-w>l
@@ -75,7 +77,7 @@ noremap ;; <C-w>w
 noremap ;' <C-w>W
 
 noremap <Space>/ I//<Space><ESC>
-" Insert Mode 
+" Insert Mode
 " inoremap <silent> jj <ESC>:<C-u>w<CR>:<C-c>
 inoremap <silent> jj <ESC>:<C-u>w<CR>
 inoremap <silent> っｊ <ESC>:<C-u>w<CR>
@@ -84,13 +86,15 @@ inoremap <silent> っｊ <ESC>:<C-u>w<CR>
 inoremap <C-d> <Delete>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-"inoremap <C-k> <Up>                          
+"inoremap <C-k> <Up>
 "inoremap <C-j> <Down>
 
 " insertMode ctrl + a, e 先頭移動、末尾移動、（インデント無視で先頭まで）
 inoremap <C-a> <ESC><S-i>
 inoremap <C-e> <ESC><S-a>
 " inoremap <C-a> <ESC>100h
+
+noremap <Space>bf :call CocAction('format')<CR>
 
 " 補完
 "inoremap <C->
@@ -121,20 +125,20 @@ set shell=/usr/local/bin/fish
 set listchars=tab:->,space:_,trail:-,eol:<,nbsp:%
 set list
 
-if &compatible    
-  set nocompatible               " Be iMproved    
-endif    
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" vim-plug 
-" :PlugInstall 
+" vim-plug
+" :PlugInstall
 """"""""""""""""""""""""""""""""""""""""""
 "if filereadable(expand('~/.config/nvim/modules/plug.rc.vim'))
   source ~/.config/nvim/modules/plug.rc.vim
 "endif
 """"""""""""""""""""""""""""""""""""""""""
-" end vim-plug 
+" end vim-plug
 """"""""""""""""""""""""""""""""""""""""""
 
 
@@ -160,7 +164,7 @@ set runtimepath+=~/.config/nvim/plugins/snippets
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" dein pack load 
+" dein pack load
 """"""""""""""""""""""""""""""""""""""""""
 " source ~/.config/nvim/plugins/dein_load.vim
 """"""""""""""""""""""""""""""""""""""""""
@@ -173,17 +177,17 @@ set runtimepath+=~/.config/nvim/plugins/snippets
 """"""""""""""""""""""""""""""""""""""""""
 source ~/.config/nvim/modules/color_scheme.vim
 """"""""""""""""""""""""""""""""""""""""""
-" color scheme end 
+" color scheme end
 """"""""""""""""""""""""""""""""""""""""""
 
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" vim air line 
+" vim air line
 """"""""""""""""""""""""""""""""""""""""""
 source ~/.config/nvim/plugins/air_line.vim
 """"""""""""""""""""""""""""""""""""""""""
-" vim air line end 
+" vim air line end
 """"""""""""""""""""""""""""""""""""""""""
 
 
@@ -205,12 +209,12 @@ source ~/.config/nvim/modules/color_conf.vim
 """"""""""""""""""""""""""""""""""""""""""
 " source ~/.config/nvim/plugins/defx.vim
 """"""""""""""""""""""""""""""""""""""""""
-" defx vim end 
+" defx vim end
 """"""""""""""""""""""""""""""""""""""""""
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" fzf vim 
+" fzf vim
 """"""""""""""""""""""""""""""""""""""""""
 "if filereadable(expand('~/.config/nvim/plugins/fzf.vim'))
 source ~/.config/nvim/plugins/fzf.vim
@@ -220,7 +224,7 @@ source ~/.config/nvim/plugins/fzf.vim
 """"""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""
-" Fern vim 
+" Fern vim
 """"""""""""""""""""""""""""""""""""""""""
 "if filereadable(expand('~/.config/nvim/plugins/fern.vim'))
   source ~/.config/nvim/plugins/fern.vim
@@ -230,7 +234,7 @@ source ~/.config/nvim/plugins/fzf.vim
 """"""""""""""""""""""""""""""""""""""""""
 
 
-" indent 
+" indent
 "inoremap {<Enter> {}<Left><CR><ESC><S-o>
 "inoremap [<Enter> []<Left><CR><ESC><S-o>
 "inoremap (<Enter> ()<Left><CR><ESC><S-o>
@@ -244,7 +248,7 @@ source ~/.config/nvim/plugins/fzf.vim
 "  source ~/.config/nvim/plugins/SyntaxInfo.vim
 "endif
 """"""""""""""""""""""""""""""""""""""
-" highlight end 
+" highlight end
 """"""""""""""""""""""""""""""""""""""""""
 
 
@@ -312,4 +316,16 @@ source ~/.config/nvim/plugins/fzf.vim
 "
 "nnoremap <silent> <Space-p> :ProjectFiles<CR>
 "nnoremap <silent> <M-p> :History<CR>
+
+" highlight Normal ctermbg=NONE
+"highlight Normal ctermbg=none
+"highlight NonText ctermbg=none
+"highlight LineNr ctermbg=none
+"highlight Folded ctermbg=none
+"highlight EndOfBuffer ctermbg=none
+set termguicolors
+let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+
+command! -nargs=0 Format :call CocAction('format')
 

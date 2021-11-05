@@ -302,7 +302,7 @@ function fish_prompt
   prompt_user
   prompt_dir
   #__exists hg;  and prompt_hg
-  #__exists git; and 
+  #__exists git; and
   prompt_git
   __exists svn; and prompt_svn
   prompt_finish
@@ -352,6 +352,7 @@ alias gconf "nvim ~/.gitconfig"
 alias cocconf "nvim ~/.config/nvim/coc-settings.json"
 alias hyconf "nvim ~/.hyper.js"
 alias alconf "nvim ~/.config/alacritty/alacritty.yml"
+alias hmconf "nvim ~/.hammerspoon/init.lua"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
 alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json && cp ~/my_scripts/.prettierignore ./.prettierrcignore"
@@ -368,6 +369,11 @@ alias w "z WORK"
 alias d "z Dev_DEMO"
 alias g "cd ~/GitHub/"
 alias o "open ."
+
+# fd => fzf (dir search) => cd
+alias cdf "cd (fd --max-depth 3 --type directory . ~ | fzf)"
+alias opf "open (fd --max-depth 7 . ~ | fzf)"
+alias codef "code (fd --max-depth 3 --type directory . ~ | fzf)"
 
 alias hosts "sudo nvim /etc/hosts"
 # alias ll "exa -l"
@@ -392,8 +398,8 @@ alias lsofip "lsof -i -P | grep "LISTEN""
 
 alias psfz "ps aux | fzf"
 
-# cli_memo_app 
-alias c "cmemo"
+# cli_memo_app
+alias c "cmemo -v"
 alias cc "cmemo -c"
 alias cconf "nvim ~/.cli_memo_app/memos/"
 alias zc "cd ~/.cli_memo_app/memos/"
@@ -440,7 +446,8 @@ alias anyenv-start "anyenv init - | source"
 alias tmux-start "tmux new -s works"
 alias inwork "anyenv-start && tmux-start"
 
-set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
+# set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
+set -x FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 
 #####
 #set -g GOENV_ROOT $HOME/.goenv
@@ -466,7 +473,7 @@ set -x FZF_DEFAULT_OPTS '--height 33% --layout=reverse --border'
 alias uitest "cd ~/Dev_DEMO/Next_js/selenium-uitest-ts"
 alias climemo "cd ~/Dev_DEMO/GO_lang/CliMemoApp"
 
-# open hyper webview 
+# open hyper webview
 alias hyper-web "cd ~/Dev_DEMO/Hyper/webview && npm run app"
 alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
 
