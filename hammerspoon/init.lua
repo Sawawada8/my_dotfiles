@@ -22,6 +22,18 @@ hs.hotkey.bind({"ctrl"}, ";", function()
 end)
 -- --------------------------------------------
 
+-- ctrl ' hotkey ------------------------------
+--hs.hotkey.bind({"ctrl"}, "'", function()
+--    -- print(hs.application.find('code'))
+--    -- print(hs.application.find('alacritty'))
+--  local alacritty = hs.application.find('code')
+--  if alacritty:isFrontmost() then
+--    alacritty:hide()
+--  else
+--    hs.application.launchOrFocus("/Applications/Google Chrome.app")
+--  end
+--end)
+-- --------------------------------------------
 
 
 --ctrlDoublePress = require("ctrlDoublePress")
