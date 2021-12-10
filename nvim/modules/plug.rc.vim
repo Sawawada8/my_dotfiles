@@ -71,5 +71,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'rust-lang/rust.vim'
 "    Plug 'leafgarland/typescript-vim'
 
+""" template
+    Plug 'mattn/vim-sonictemplate'
+
 call plug#end()
 

@@ -169,7 +169,6 @@
   ],
   "haskell.ghcMod.executablePath": "stack",
   "go.toolsManagement.autoUpdate": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "emeraldwalk.runonsave": {
     "commands": [
       {
@@ -183,5 +182,6 @@
     "editorCursor.foreground": "#999366",
     "terminalCursor.foreground": "#b1a870"
   },
-  "rust.clippy_preference": "on"
+  "rust.clippy_preference": "on",
+  "editor.trimAutoWhitespace": false
 }

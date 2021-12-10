@@ -403,6 +403,8 @@ alias c "cmemo -v"
 alias cc "cmemo -c"
 alias cconf "nvim ~/.cli_memo_app/memos/"
 alias zc "cd ~/.cli_memo_app/memos/"
+alias 2m "code ~/2M_coding/2_minutes_coding/"
+alias mynote "code ~/GitHub/my-note/"
 
 # rails new api
 alias rails_new_api "docker run -d -v (pwd):/project rails_new_create__api_postgres:2.0.0"
