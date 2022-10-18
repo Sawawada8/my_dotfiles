@@ -8,7 +8,7 @@ indent_size = 4
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.{html,css,scss,js,ts,jsx,tsx,vue,json,yml,yaml,xml}]
+[*.{html,css,scss,js,ts,jsx,tsx,vue,json,yml,yaml,xml,blade.php}]
 indent_size = 2
 
 [{Makefile,*.go}]

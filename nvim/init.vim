@@ -13,6 +13,7 @@ noremap <Space>w :w<CR>
 " noremap <Space>q :<C-u>q<CR>
 noremap <Space>q :q<CR>
 
+
 """"""""""""""""""""
 " ctrlp file search
 "let g:ctrlp_map = '<Space>p'
@@ -129,6 +130,8 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+
+let mapleader=","
 
 """"""""""""""""""""""""""""""""""""""""""
 " vim-plug
@@ -254,7 +257,7 @@ source ~/.config/nvim/plugins/fzf.vim
 
 """"""""""""""""""""""""""""""""""""""""""
 "coc vim
-""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
 "if filereadable(expand('~/.config/nvim/plugins/coc.vim'))
   source ~/.config/nvim/plugins/coc.vim
 "endif
@@ -328,4 +331,7 @@ let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 
 command! -nargs=0 Format :call CocAction('format')
+
+
+"map <Leader>l <Plug>(easymotion-prefix)
 

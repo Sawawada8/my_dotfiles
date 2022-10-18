@@ -1,3 +1,17 @@
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 -- ctrl ; hotkey ------------------------------
 --hs.hotkey.bind({"ctrl"}, ";", function()
 --  local alacritty = hs.application.find('alacritty')
@@ -23,16 +37,30 @@ end)
 -- --------------------------------------------
 
 -- ctrl ' hotkey ------------------------------
---hs.hotkey.bind({"ctrl"}, "'", function()
---    -- print(hs.application.find('code'))
---    -- print(hs.application.find('alacritty'))
---  local alacritty = hs.application.find('code')
---  if alacritty:isFrontmost() then
---    alacritty:hide()
---  else
---    hs.application.launchOrFocus("/Applications/Google Chrome.app")
---  end
---end)
+-- hs.hotkey.bind({"ctrl"}, "'", function()
+--     -- print(hs.application.find('code'))
+--     -- print(hs.application.find('alacritty'))
+--   local alacritty = hs.application.find('Google Chrome')
+--   if alacritty:isFrontmost() then
+--     alacritty:hide()
+--   else
+--     hs.application.launchOrFocus("/Applications/Google Chrome.app")
+--   end
+-- end)
+
+hs.hotkey.bind({"ctrl"}, "'", function()
+--    print(dump(hs.application.runningApplications()))
+
+    -- print(hs.application.find('code'))
+    -- print(hs.application.find('alacritty'))
+--    hs.application.enableSpotlightForNameSearches(true)
+  local alacritty = hs.application.find('Brave Browser')
+  if alacritty:isFrontmost() then
+    alacritty:hide()
+  else
+    hs.application.launchOrFocus("/Applications/Brave Browser.app")
+  end
+end)
 -- --------------------------------------------
 
 
@@ -68,15 +96,25 @@ local module   = {}
 module.timeFrame = 0.3
 
 -- what to do when the double tap of ctrl occurs
+-- alacritty
+--module.action = function()
+--  local alacritty = hs.application.find('alacritty')
+--  if alacritty:isFrontmost() then
+--    alacritty:hide()
+--  else
+--    hs.application.launchOrFocus("/Applications/Alacritty.app")
+--  end
+--end
+
+-- item2
 module.action = function()
-  local alacritty = hs.application.find('alacritty')
+  local alacritty = hs.application.find('iTerm2')
   if alacritty:isFrontmost() then
     alacritty:hide()
   else
-    hs.application.launchOrFocus("/Applications/Alacritty.app")
+    hs.application.launchOrFocus("/Applications/iTerm.app")
   end
 end
-
 
 -- Synopsis:
 

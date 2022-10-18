@@ -355,6 +355,7 @@ alias alconf "nvim ~/.config/alacritty/alacritty.yml"
 alias hmconf "nvim ~/.hammerspoon/init.lua"
 
 alias create-editor-config "cp ~/my_scripts/.editorconfig ./.editorconfig"
+alias create-server-docker-compose "cp ~/my_scripts/docker-compose.yml ./docker-compose.yml"
 alias create-pre-config "cp ~/my_scripts/.prettierrc.json ./.prettierrc.json && cp ~/my_scripts/.prettierignore ./.prettierrcignore"
 
 alias l "exa -la -g --icons"
@@ -481,4 +482,3 @@ alias hyper-plug "cd ~/.hyper_plugins/node_modules/"
 
 
 # starship init fish | source
-

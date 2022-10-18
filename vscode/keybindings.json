@@ -141,7 +141,19 @@
     "key": "shift+a",
     "command": "git.stage",
     "when": "isInDiffEditor"
-  }
+  },
+  // {
+  //   "key": "space [",
+  //   "command": "extension.jumpy-exit"
+  // },
+  // {
+  //   "key": "space ;",
+  //   "command": "extension.jumpy-line"
+  // },
+  // {
+  //   "key": "space '",
+  //   "command": "extension.jumpy-word"
+  // },
   /*
   {// latest open project
     "key": "ctrl+r",
@@ -149,4 +161,42 @@
     "when": "editorTextFocus"
   }
  */
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.tasks.runTask",
+    "args": "kotlinc"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "workbench.action.tasks.runTask",
+    "args": "execjar"
+  },
+  {
+    "key": "cmd+;",
+    "command": "workbench.action.previousPanelView"
+  },
+  {
+    "key": "cmd+'",
+    "command": "workbench.action.nextPanelView"
+  },
+  {
+    "key": "shift+cmd+8",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+  {
+    "key": "f8",
+    "command": "-editor.action.marker.nextInFiles",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+9",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+f8",
+    "command": "-editor.action.marker.prevInFiles",
+    "when": "editorFocus"
+  }
 ]

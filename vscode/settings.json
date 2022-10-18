@@ -3,17 +3,22 @@
   "workbench.iconTheme": "vscode-icons",
   "editor.fontSize": 14,
   "editor.lineHeight": 16,
+  "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+  "terminal.integrated.fontSize": 11,
   "intelephense.diagnostics.undefinedConstants": false,
   "intelephense.diagnostics.undefinedFunctions": false,
   "intelephense.diagnostics.undefinedMethods": false,
   "intelephense.diagnostics.undefinedProperties": false,
   "intelephense.diagnostics.undefinedTypes": false,
   "intelephense.diagnostics.undefinedClassConstants": false,
+  "workbench.colorTheme": "GitHub Dark Default",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "editor.wordWrap": "on",
-  "workbench.colorTheme": "Iceberg",
   "vim.leader": "<space>",
+  // "vim.hlsearch": false,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "sdfghkl",
   "vim.visualModeKeyBindings": [
     {
       "before": [">"],
@@ -101,13 +106,11 @@
       "commands": ["workbench.action.focusPreviousGroup"]
     }
   ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "workbench.tree.renderIndentGuides": "always",
   "tabnine.experimentalAutoImports": true,
   "editor.minimap.maxColumn": 25,
-  "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
   "gitlens.codeLens.scopes": ["document", "containers"],
   "terminal.integrated.macOptionClickForcesSelection": true,
   "files.autoSave": "onFocusChange",
@@ -156,7 +159,7 @@
     // "rgb(100, 149, 237)",
     // "rgb(30, 144, 255)",
     // "rgb(70, 110, 230)",
-    // "rgb(127, 255, 212)"
+    // "rgb(127, 255, 212)",
     // "#c5c8d1",
     // "#b6b7ba"
     // "rgb(200,200,200)",
@@ -179,9 +182,33 @@
   },
   // "editor.formatOnSave": true,
   "workbench.colorCustomizations": {
+    "[Kitty VSCode Theme]": {},
     "editorCursor.foreground": "#999366",
     "terminalCursor.foreground": "#b1a870"
   },
   "rust.clippy_preference": "on",
-  "editor.trimAutoWhitespace": false
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "http://localhost:8088",
+  "blade.format.enable": true,
+  "bladeFormatter.format.indentSize": 2,
+  "bladeFormatter.format.useTabs": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "files.saveConflictResolution": "overwriteFileOnDisk",
+  "editor.trimAutoWhitespace": false,
+  "files.trimTrailingWhitespace": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "editor.bracketPairColorization.enabled": true,
+  "haskell.manageHLS": "PATH",
+  "npm.keybindingsChangedWarningShown": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "rapidapi.terminalLink.enabled": false,
+  "workbench.activityBar.visible": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }

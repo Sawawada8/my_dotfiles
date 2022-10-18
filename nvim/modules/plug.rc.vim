@@ -36,6 +36,9 @@ call plug#begin('~/.config/nvim/plugged')
 """ fuzzy
 "    Plug 'mattn/vim-fz'
 
+""" easymotion
+    Plug 'easymotion/vim-easymotion'
+
 """ .editorconfig
     Plug 'editorconfig/editorconfig-vim'
 
