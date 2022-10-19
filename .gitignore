@@ -1,2 +1,3 @@
 # /plugged/*
 iterm2/profiles/*
+!iterm2/profiles/iceberg profile.json
