@@ -3,10 +3,10 @@
 # end
 # Set these options in your config.fish (if you want to :])
 #
-     set -g theme_display_user yes
-     set -g theme_hostname never
-     set -g theme_hostname always
-     set -g default_user your_normal_user
+    set -g theme_display_user yes
+    set -g theme_hostname never
+    set -g theme_hostname always
+    set -g default_user your_normal_user
 
 
 

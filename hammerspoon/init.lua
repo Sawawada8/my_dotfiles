@@ -13,9 +13,9 @@
 hs.hotkey.bind({"ctrl"}, ";", function()
     -- print(hs.application.find('code'))
     -- print(hs.application.find('alacritty'))
-  local alacritty = hs.application.find('code')
-  if alacritty:isFrontmost() then
-    alacritty:hide()
+  local vscode = hs.application.find('code')
+  if vscode:isFrontmost() then
+    vscode:hide()
   else
     hs.application.launchOrFocus("/Applications/Visual Studio Code.app")
   end
