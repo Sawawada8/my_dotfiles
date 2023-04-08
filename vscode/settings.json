@@ -69,6 +69,12 @@
       "commands": ["editor.debug.action.toggleBreakpoint"]
     },
     {
+      // exec phpunit at cursor
+      // https://marketplace.visualstudio.com/items?itemName=recca0120.vscode-phpunit
+      "before": ["<leader>", "t"],
+      "commands": ["phpunit.run-test-at-cursor"]
+    },
+    {
       "before": ["<leader>", "d", "s"],
       "commands": ["workbench.action.debug.start"]
     },
