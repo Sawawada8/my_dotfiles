@@ -16,6 +16,7 @@
                 },
                 "rules": [
                     {
+                         
                         "description": "Ctrl+f/Ctrl+b to arrow right/left",
                         "manipulators": [
                             {
@@ -97,7 +98,7 @@
                                     "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                             "control"
                                         ],
                                         "optional": [
                                             "any"
