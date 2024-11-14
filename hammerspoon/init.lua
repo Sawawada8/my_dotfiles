@@ -48,19 +48,31 @@ end)
 --   end
 -- end)
 
-hs.hotkey.bind({"ctrl"}, "'", function()
---    print(dump(hs.application.runningApplications()))
+isChorome = false
+if isChorome then
+  hs.hotkey.bind({"ctrl"}, "'", function()
+  --    print(dump(hs.application.runningApplications()))
 
-    -- print(hs.application.find('code'))
-    -- print(hs.application.find('alacritty'))
---    hs.application.enableSpotlightForNameSearches(true)
-  local alacritty = hs.application.find('Brave Browser')
-  if alacritty:isFrontmost() then
-    alacritty:hide()
-  else
-    hs.application.launchOrFocus("/Applications/Brave Browser.app")
-  end
-end)
+      -- print(hs.application.find('code'))
+      -- print(hs.application.find('alacritty'))
+  --    hs.application.enableSpotlightForNameSearches(true)
+    local alacritty = hs.application.find('Brave Browser')
+    if alacritty:isFrontmost() then
+      alacritty:hide()
+    else
+      hs.application.launchOrFocus("/Applications/Brave Browser.app")
+    end
+  end)
+else
+  hs.hotkey.bind({"ctrl"}, "'", function()
+    local alacritty = hs.application.find('Google Chorome')
+    if alacritty:isFrontmost() then
+      alacritty:hide()
+    else
+      hs.application.launchOrFocus("/Applications/Google Chorome.app")
+    end
+  end)
+end
 -- --------------------------------------------
 
 
